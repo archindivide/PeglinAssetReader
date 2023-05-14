@@ -1,4 +1,5 @@
 ﻿using HandlebarsDotNet;
+using System.ComponentModel.Design.Serialization;
 using System.Configuration;
 using System.Diagnostics;
 using System.Text.RegularExpressions;
@@ -11,6 +12,7 @@ var languageFile = $"{assetRipperOutputPath}/ExportedProject/Assets/Resources/I2
 var assetFilePath = $"{assetPath}/MonoBehaviour";
 var spriteMetaDataFilePath = $"{assetPath}/Sprite";
 var spriteImageFilePath = $"{assetPath}/Texture2D";
+var paramFile = $"{assetPath}/Scenes/Battle.unity";
 var outputPath = $"{Environment.CurrentDirectory}/output";
 var imageOutputPath = $"{outputPath}/img";
 
@@ -38,6 +40,44 @@ else
     proc.Close();
 }
 
+//Parse params (for constants used in descriptions)
+var paramText = File.ReadAllText(paramFile);
+var startString = "_Params:";
+var endString = "_IsGlobalManager";
+
+var index = paramText.IndexOf(startString);
+var nextIndex = index;
+Dictionary<string, string> constants = new Dictionary<string, string>();
+
+while ((index = nextIndex) > 0)
+{
+    var toParse = paramText.Substring(index, paramText.IndexOf(endString, index + 1) - index);
+    var lines = toParse.Split('\n');
+
+    var tempName = "";
+    var tempValue = "";
+
+    foreach(var line in lines)
+    {
+        if (line.Contains("Name"))
+        {
+            var split = line.Split(':');
+            tempName = split[1].Trim();
+        }
+        else if (line.Contains("Value"))
+        {
+            var split = line.Split(':');
+            tempValue = split[1].Trim();
+            if(!constants.Any(c => c.Key == tempName))
+            {
+                constants.Add(tempName, tempValue);
+            }
+        }
+    }
+
+    nextIndex = paramText.IndexOf(startString, index + 1);
+}
+
 //Parse language file
 var languageText = File.ReadAllText(languageFile);
 
@@ -48,8 +88,8 @@ if(languageText == null)
 }
 
 var relicIdentifierString = "- Term: Relics/";
-var index = languageText.IndexOf(relicIdentifierString);
-var nextIndex = index;
+index = languageText.IndexOf(relicIdentifierString);
+nextIndex = index;
 
 var relics = new List<Relic>();
 
@@ -206,6 +246,11 @@ foreach (var relic in relics.Where(r => r.ImageFileName == null))
 
 //output a nice html page with sprites/descriptions
 var outputSet = relics.Where(r => r.ImageFileName != null);
+
+foreach(var relic in outputSet)
+{
+    relic.FixDescriptions(constants);
+}
 
 var template = Handlebars.Compile(File.ReadAllText($"{Environment.CurrentDirectory}/OutputTemplate.template"));
 

@@ -6,15 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Peglin Relics</title>
     <style>
-		.body {
+		body {
 			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			font-family: Arial, sans-serif;
 		}
-
+		
         .relic-container {
 			border: 2px solid #000000;
 			border-radius: 5px;
 			height: 50px;
 			width: 50px;
+			margin-bottom: 5px;
+			margin-right: 5px;
+			padding: 5px;
 		}
 		
         .relic-container img {
@@ -25,17 +31,16 @@
 		.tooltip {
 			position: relative;
 			display: inline-block;
-			border-bottom: 1px dotted black;
 		}
 
 		.tooltip .tooltiptext {
 			visibility: hidden;
-			width: 120px;
+			width: 200px;
 			background-color: black;
 			color: #fff;
 			text-align: center;
 			border-radius: 6px;
-			padding: 5px 0;
+			padding: 5px;
 
 			/* Position the tooltip */
 			position: absolute;
@@ -45,20 +50,29 @@
 		.tooltip:hover .tooltiptext {
 			visibility: visible;
 		}
+		
+		.relic-name {
+			font-size: 18px;
+			font-weight: bold;
+		}
+		
+		.relic-description {
+			font-size: 14px;
+		}
     </style>
   </head>
   <body>
     {{#each relics}}
-        <div class="relic-container">
-			<div class="tooltip">
+		<div class="tooltip">
+			<div class="relic-container">
 				<img src="img/{{this.ImageFileName}}" />
-				<div class="tooltiptext">
-					<div class="relic-name">
-						{{this.Name}}
-					</div>
-					<div class="relic-description">
-						{{this.DescCombined}}
-					</div>
+			</div>
+			<div class="tooltiptext">
+				<div class="relic-name">
+					{{this.Name}}
+				</div>
+				<div class="relic-description">
+					{{this.DescCombined}}
 				</div>
 			</div>
         </div>
