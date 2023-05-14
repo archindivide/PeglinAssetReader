@@ -93,12 +93,12 @@ nextIndex = index;
 
 var relics = new List<Relic>();
 
-while((index = nextIndex) > 0)
+while((index = nextIndex) < languageText.Length)
 {
     nextIndex = languageText.IndexOf(relicIdentifierString, index + 1);
     if(nextIndex < 0)
     {
-        continue;
+        nextIndex = languageText.Length;
     }
     var toParse = languageText.Substring(index, nextIndex - index);
     var lines = toParse.Split('\n');

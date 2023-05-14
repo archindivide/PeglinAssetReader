@@ -11,6 +11,7 @@
 			flex-direction: row;
 			flex-wrap: wrap;
 			font-family: Arial, sans-serif;
+			max-width: 1000px;
 		}
 		
         .relic-container {
