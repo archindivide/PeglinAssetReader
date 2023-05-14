@@ -8,22 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="OutputTemplate.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>OutputTemplate.tt</DependentUpon>
-    </None>
-  </ItemGroup>
-
-  <ItemGroup>
+    <PackageReference Include="Handlebars.Net" Version="2.1.4" />
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="7.0.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="OutputTemplate.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>OutputTemplate.cs</LastGenOutput>
-    </None>
   </ItemGroup>
 
   <ItemGroup>
@@ -31,11 +17,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="OutputTemplate.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>OutputTemplate.tt</DependentUpon>
-    </Compile>
+    <None Update="OutputTemplate.template">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

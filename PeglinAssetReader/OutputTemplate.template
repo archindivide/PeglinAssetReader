@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Peglin Relics</title>
+    <style>
+		.body {
+			display: flex;
+		}
+
+        .relic-container {
+			border: 2px solid #000000;
+			border-radius: 5px;
+			height: 50px;
+			width: 50px;
+		}
+		
+        .relic-container img {
+            height: 50px;
+            width: 50px;
+        }
+		
+		.tooltip {
+			position: relative;
+			display: inline-block;
+			border-bottom: 1px dotted black;
+		}
+
+		.tooltip .tooltiptext {
+			visibility: hidden;
+			width: 120px;
+			background-color: black;
+			color: #fff;
+			text-align: center;
+			border-radius: 6px;
+			padding: 5px 0;
+
+			/* Position the tooltip */
+			position: absolute;
+			z-index: 1;
+		}
+
+		.tooltip:hover .tooltiptext {
+			visibility: visible;
+		}
+    </style>
+  </head>
+  <body>
+    {{#each relics}}
+        <div class="relic-container">
+			<div class="tooltip">
+				<img src="img/{{this.ImageFileName}}" />
+				<div class="tooltiptext">
+					<div class="relic-name">
+						{{this.Name}}
+					</div>
+					<div class="relic-description">
+						{{this.DescCombined}}
+					</div>
+				</div>
+			</div>
+        </div>
+    {{/each}}
+  </body>
+</html>

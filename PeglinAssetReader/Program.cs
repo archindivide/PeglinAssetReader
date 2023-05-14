@@ -1,25 +1,222 @@
-﻿using System.Configuration;
+﻿using HandlebarsDotNet;
+using System.Configuration;
 using System.Diagnostics;
+using System.Text.RegularExpressions;
 
-//Run AssetRipper to extract Peglin files from compiled code
 var peglinPath = ConfigurationManager.AppSettings["PeglinFolder"];
 var assetRipperPath = ConfigurationManager.AppSettings["AssetRipperApplication"];
-var outputPath = Environment.CurrentDirectory + "/output";
+var assetRipperOutputPath = $"{Environment.CurrentDirectory}/asset-ripper-output";
+var assetPath = $"{assetRipperOutputPath}/ExportedProject/Assets";
+var languageFile = $"{assetRipperOutputPath}/ExportedProject/Assets/Resources/I2Languages.asset";
+var assetFilePath = $"{assetPath}/MonoBehaviour";
+var spriteMetaDataFilePath = $"{assetPath}/Sprite";
+var spriteImageFilePath = $"{assetPath}/Texture2D";
+var outputPath = $"{Environment.CurrentDirectory}/output";
+var imageOutputPath = $"{outputPath}/img";
 
-var proc = new Process();
-proc.StartInfo.FileName = assetRipperPath;
-proc.StartInfo.Arguments = $"{peglinPath} -o {outputPath}";
-proc.Start();
-proc.WaitForExit();
-var exitCode = proc.ExitCode;
-proc.Close();
+var ignoreKeys = new List<string>() 
+{
+    //"damage_bonus_plant_flat",
+    //"damage_bonus_slime_flat",
+    //"healing_slime",
+    //"heal_on_reload_peg_num"
+};
 
-Console.WriteLine(exitCode);
+//Run AssetRipper to extract Peglin files from compiled code
+if (Directory.Exists(assetRipperOutputPath) && Directory.GetFileSystemEntries(assetRipperOutputPath).Length > 0)
+{
+    Console.WriteLine("Skipping AssetRipper step because there are already files in the output path.");
+}
+else
+{
+    var proc = new Process();
+    proc.StartInfo.FileName = assetRipperPath;
+    proc.StartInfo.Arguments = $"{peglinPath} -o {assetRipperOutputPath} -q";
+    proc.Start();
+    proc.WaitForExit();
+    var exitCode = proc.ExitCode;
+    proc.Close();
+}
 
 //Parse language file
+var languageText = File.ReadAllText(languageFile);
 
-//Parse asset files
+if(languageText == null)
+{
+    Console.WriteLine("Language File not found or couldn't be read");
+    return;
+}
 
-//Compile asset/image/language info together into single object
+var relicIdentifierString = "- Term: Relics/";
+var index = languageText.IndexOf(relicIdentifierString);
+var nextIndex = index;
+
+var relics = new List<Relic>();
+
+while((index = nextIndex) > 0)
+{
+    nextIndex = languageText.IndexOf(relicIdentifierString, index + 1);
+    if(nextIndex < 0)
+    {
+        continue;
+    }
+    var toParse = languageText.Substring(index, nextIndex - index);
+    var lines = toParse.Split('\n');
+
+    Regex resouceNameRegex = new Regex("Relics/(.*)");
+    Match m = resouceNameRegex.Match(toParse);
+    var resourceName = m.Groups[1].Value;
+
+    var locKey = resourceName.Replace("_desc3", "").Replace("_desc2", "").Replace("_desc", "").Replace("_name", "");
+    var currentRelic = relics.Where(r => r.LocKey == locKey).FirstOrDefault();
+
+    if(ignoreKeys.Any(i => i == locKey))
+    {
+        continue;
+    }
+
+    if(currentRelic == null)
+    {
+        currentRelic = new Relic(locKey);
+        relics.Add(currentRelic);
+    }
+
+    if (resourceName.EndsWith("_desc"))
+    {
+        currentRelic.Desc = lines[3].Substring(lines[3].IndexOf('-') + 2, lines[3].Length - (lines[3].IndexOf('-') + 2));
+        //add parsing for other languages
+    }
+    else if (resourceName.EndsWith("_desc2"))
+    {
+        currentRelic.Desc2 = lines[3].Substring(lines[3].IndexOf('-') + 2, lines[3].Length - (lines[3].IndexOf('-') + 2));
+        //add parsing for other languages
+    }
+    else if (resourceName.EndsWith("_desc3"))
+    {
+        currentRelic.Desc3 = lines[3].Substring(lines[3].IndexOf('-') + 2, lines[3].Length - (lines[3].IndexOf('-') + 2));
+        //add parsing for other languages
+    }
+    else if (resourceName.EndsWith("_name"))
+    {
+        currentRelic.Name = lines[3].Substring(lines[3].IndexOf('-') + 2, lines[3].Length - (lines[3].IndexOf('-') + 2));
+        //add parsing for other languages
+    }
+    else
+    {
+        Console.WriteLine($"Couldn't resolve resource: {resourceName}");
+    }
+}
+
+//Load all the asset files
+List<string> fileTexts = new List<string>();
+var paths = Directory.GetFiles(assetFilePath);
+
+foreach (var path in paths)
+{
+    fileTexts.Add(File.ReadAllText(path));
+}
+
+//Parse asset files for sprite guids
+foreach(var relic in relics)
+{
+    var file = fileTexts.Where(t => t.Contains(relic.LocKey)).FirstOrDefault();
+    if (file != null)
+    {
+        Regex regex = new Regex("sprite:.*guid: (.*),");
+        Match m = regex.Match(file);
+        relic.SpriteGuid = m.Groups[1].Value;
+    }
+}
+
+fileTexts.Clear(); //no need to keep this in memory, might be used later
+
+//Load all the sprite metadata files
+paths = Directory.GetFiles(spriteMetaDataFilePath);
+Dictionary<string,string> pathFileTexts = new Dictionary<string,string>();
+
+foreach (var path in paths)
+{
+    pathFileTexts.Add(path, File.ReadAllText(path));
+}
+
+//Parse the sprite meta data files to get the image file names
+foreach (var relic in relics.Where(r => r.SpriteGuid != null))
+{
+    var file = pathFileTexts.FirstOrDefault(t => t.Value.Contains(relic.SpriteGuid!));
+    if (file.Value != null)
+    {
+        relic.ImageFileName = file.Key.Substring(file.Key.LastIndexOf('\\') + 1, file.Key.Length - (file.Key.LastIndexOf('\\') + 1)).Replace(".asset.meta", ".png");
+    }
+}
+
+pathFileTexts.Clear(); //no need to keep this in memory, might be used later
+
+//Create/clear output directory
+if (!Directory.Exists(outputPath))
+{
+    Directory.CreateDirectory(outputPath);
+}
+else
+{
+    Directory.Delete(outputPath, true);
+    Directory.CreateDirectory(outputPath);
+}
+if (!Directory.Exists(imageOutputPath))
+{
+    Directory.CreateDirectory(imageOutputPath);
+}
+else
+{
+    Directory.Delete(imageOutputPath, true);
+    Directory.CreateDirectory(imageOutputPath);
+}
+
+//Move image files into output folder
+foreach(var relic in relics.Where(r => r.ImageFileName != null))
+{
+    try
+    {
+        relic.OutputImageFilePath = $"{imageOutputPath}/{relic.ImageFileName}";
+        File.Copy($"{spriteImageFilePath}/{relic.ImageFileName}", relic.OutputImageFilePath, true);
+    }
+    catch
+    {
+        //failed to find the file at the path or failed to copy it
+        relic.ImageFileName = null;
+        relic.OutputImageFilePath = null;
+    }
+}
+
+//Identify relics that we couldn't link together to find an image file for, some of these are not real relics, old code, etc
+Console.WriteLine("Malformed relics left out:");
+Console.WriteLine();
+
+foreach (var relic in relics.Where(r => r.ImageFileName == null))
+{
+    Console.WriteLine($"LocKey: {relic.LocKey}");
+    Console.WriteLine($"Name: {relic.Name}");
+    Console.WriteLine($"Desc: {relic.Desc}");
+    Console.WriteLine($"Desc2: {relic.Desc2}");
+    Console.WriteLine($"Desc3: {relic.Desc3}");
+    Console.WriteLine($"SpriteGuid: {relic.SpriteGuid}");
+    Console.WriteLine($"ImageFileName: {relic.ImageFileName}");
+
+    Console.WriteLine();
+}
 
 //output a nice html page with sprites/descriptions
+var outputSet = relics.Where(r => r.ImageFileName != null);
+
+var template = Handlebars.Compile(File.ReadAllText($"{Environment.CurrentDirectory}/OutputTemplate.template"));
+
+var data = new
+{
+    relics = outputSet,
+};
+
+var result = template(data);
+
+File.WriteAllText($"{outputPath}/index.html", result);
+
+Console.WriteLine("Outputs generated successfully!");
+Console.WriteLine();
