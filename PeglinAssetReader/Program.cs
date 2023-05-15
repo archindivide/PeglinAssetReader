@@ -185,7 +185,10 @@ foreach (var relic in relics.Where(r => r.SpriteGuid != null))
     var file = pathFileTexts.FirstOrDefault(t => t.Value.Contains(relic.SpriteGuid!));
     if (file.Value != null)
     {
-        relic.ImageFileName = file.Key.Substring(file.Key.LastIndexOf('\\') + 1, file.Key.Length - (file.Key.LastIndexOf('\\') + 1)).Replace(".asset.meta", ".png");
+        var baseFileName = file.Key.Substring(file.Key.LastIndexOf('\\') + 1, file.Key.Length - (file.Key.LastIndexOf('\\') + 1));
+        var replaceExtension = baseFileName.Replace(".asset.meta", ".png");
+        var removeOtherStuff = replaceExtension.Replace(" 0", "");
+        relic.ImageFileName = removeOtherStuff;
     }
 }
 

@@ -69,6 +69,9 @@
             .Replace("<style=dexterity>", "")
             .Replace("<style=durable>", "")
             .Replace("<style=shield>", "")
+            .Replace("<style=bramble>", "")
+            .Replace("<style=Bramble>", "")
+            .Replace("<style=poison>", "")
             .Replace("</style>", "")
             //manual fixes
             .Replace("{[STR_RELOAD_COUNT]} reloads", "reload")
