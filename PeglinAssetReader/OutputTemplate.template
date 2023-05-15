@@ -67,8 +67,8 @@
 		}
 
 		.crit_pit {
-			background-position: top left;
-			background-size: 125px;
+			background-position: -15px -15px;
+			background-size: 180px;
 		}
 
 		.inflight_damage {
