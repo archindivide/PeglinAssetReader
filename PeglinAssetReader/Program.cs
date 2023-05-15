@@ -159,7 +159,7 @@ foreach (var path in paths)
 //Parse asset files for sprite guids
 foreach(var relic in relics)
 {
-    var file = fileTexts.Where(t => t.Contains(relic.LocKey)).FirstOrDefault();
+    var file = fileTexts.Where(t => t.Contains(" " + relic.LocKey)).FirstOrDefault();
     if (file != null)
     {
         Regex regex = new Regex("sprite:.*guid: (.*),");
