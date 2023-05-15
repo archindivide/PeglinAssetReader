@@ -22,13 +22,11 @@
 			margin-bottom: 5px;
 			margin-right: 5px;
 			padding: 5px;
-		}
-		
-        .relic-container img {
-            height: 50px;
-            width: 50px;
+			background-repeat: no-repeat;
+			background-position: 5px;
 			image-rendering: pixelated;
-        }
+			background-size: 50px;
+		}
 		
 		.tooltip {
 			position: relative;
@@ -61,12 +59,32 @@
 		.relic-description {
 			font-size: 14px;
 		}
+
+		/* customizations for individual resources to fix some images */
+		.bramble_blind_combo {
+			background-position: top left;
+			background-size: 180px;
+		}
+
+		.crit_pit {
+			background-position: top left;
+			background-size: 125px;
+		}
+
+		.inflight_damage {
+			background-position: 2px;
+			background-size: 300px;
+		}
+
+		.attacks_apply_poison {
+			background-position: top;
+			background-size: 160px;
+		}
     </style>
   </head>
   <body>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/stoneblock_01a.png" />
+			<div class="relic-container additional_bomb_damage" style="background-image: url('img/stoneblock_01a.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -78,8 +96,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/perfected_reactant.png" />
+			<div class="relic-container additional_bomb_damage2" style="background-image: url('img/perfected_reactant.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -91,8 +108,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/bomb_rod.png" />
+			<div class="relic-container additional_bombs" style="background-image: url('img/bomb_rod.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -104,8 +120,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/ambidextionary.png" />
+			<div class="relic-container additional_discard" style="background-image: url('img/ambidextionary.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -117,8 +132,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/liquid_gold.png" />
+			<div class="relic-container additional_gold" style="background-image: url('img/liquid_gold.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -130,8 +144,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/turtle_eye.png" />
+			<div class="relic-container additional_orb_relic_options" style="background-image: url('img/turtle_eye.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -143,8 +156,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/peglintuition.png" />
+			<div class="relic-container additional_peglin_options" style="background-image: url('img/peglintuition.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -156,8 +168,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/backpack.png" />
+			<div class="relic-container adjacency_bonus" style="background-image: url('img/backpack.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -169,8 +180,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/Constricting_Chains.png" />
+			<div class="relic-container aim_limiter" style="background-image: url('img/Constricting_Chains.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -182,8 +192,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/ice_rod.png" />
+			<div class="relic-container all_attacks_pierce" style="background-image: url('img/ice_rod.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -195,8 +204,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/sapper_sack.png" />
+			<div class="relic-container all_bombs_rigged" style="background-image: url('img/sapper_sack.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -208,8 +216,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/coin_single.png" />
+			<div class="relic-container all_in" style="background-image: url('img/coin_single.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -221,8 +228,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/buff_ring.png" />
+			<div class="relic-container all_orbs_buff" style="background-image: url('img/buff_ring.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -234,8 +240,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/defresh_potion.png" />
+			<div class="relic-container all_orbs_morbid" style="background-image: url('img/defresh_potion.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -247,8 +252,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/goblin_kings_curse_gold.png" />
+			<div class="relic-container alternate_shot_power" style="background-image: url('img/goblin_kings_curse_gold.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -260,8 +264,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/sling.png" />
+			<div class="relic-container basic_stone_bonus_damage" style="background-image: url('img/sling.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -273,8 +276,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/toadem.png" />
+			<div class="relic-container battle_upgrades_heal_max_hp" style="background-image: url('img/toadem.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -286,8 +288,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/pocket_sand.png" />
+			<div class="relic-container blind_when_hit" style="background-image: url('img/pocket_sand.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -299,8 +300,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/material_11.png" />
+			<div class="relic-container bomb_force_always" style="background-image: url('img/material_11.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -312,8 +312,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/material_11.png" />
+			<div class="relic-container bomb_force_always_legacy" style="background-image: url('img/material_11.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -325,8 +324,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/gunpowder.png" />
+			<div class="relic-container bomb_splash" style="background-image: url('img/gunpowder.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -338,8 +336,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/smoke_bomb.png" />
+			<div class="relic-container bombs_apply_blind" style="background-image: url('img/smoke_bomb.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -351,8 +348,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/candle_01b.png" />
+			<div class="relic-container bombs_one_hit" style="background-image: url('img/candle_01b.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -364,8 +360,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/recombombulator.png" />
+			<div class="relic-container bombs_respawn" style="background-image: url('img/recombombulator.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -377,8 +372,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/ring_050.png" />
+			<div class="relic-container bottom_bouncers_count" style="background-image: url('img/ring_050.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -390,8 +384,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/necklace_plain.png" />
+			<div class="relic-container bounces_count" style="background-image: url('img/necklace_plain.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -403,21 +396,19 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/branch_of_ember.png" />
+			<div class="relic-container bramble_blind_combo" style="background-image: url('img/branch_of_ember.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
 					Branch of Ember
 				</div>
 				<div class="relic-description">
-					When applying Bramble to an enemy, apply Blind 2. When applying Blind to an &lt;style=Bramble&gt;un-Brambled enemy, apply Bramble 1.
+					When applying Bramble to an enemy, apply Blind 2. When applying Blind to an un-Brambled enemy, apply Bramble 1.
 				</div>
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/peglineros_pendant.png" />
+			<div class="relic-container coins_contribute_to_damage" style="background-image: url('img/peglineros_pendant.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -429,8 +420,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/helmet_16.png" />
+			<div class="relic-container confusion" style="background-image: url('img/helmet_16.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -442,8 +432,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/molten_mantle.png" />
+			<div class="relic-container convert_coin_to_damage" style="background-image: url('img/molten_mantle.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -455,8 +444,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/gold_green_ring.png" />
+			<div class="relic-container create_gold_on_refresh" style="background-image: url('img/gold_green_ring.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -468,8 +456,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/HeavyShaft.png" />
+			<div class="relic-container crit_also_refresh" style="background-image: url('img/HeavyShaft.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -481,8 +468,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/critikris.png" />
+			<div class="relic-container crit_damages_enemies" style="background-image: url('img/critikris.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -494,8 +480,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/map.png" />
+			<div class="relic-container crit_pit" style="background-image: url('img/map.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -507,8 +492,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/crit_fleece.png" />
+			<div class="relic-container crits_stack" style="background-image: url('img/crit_fleece.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -520,8 +504,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/crit_fleece.png" />
+			<div class="relic-container crits_stack_ancient" style="background-image: url('img/crit_fleece.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -533,8 +516,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/cheese.png" />
+			<div class="relic-container damage_enemies_on_reload" style="background-image: url('img/cheese.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -546,8 +528,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/oboe.png" />
+			<div class="relic-container damage_reduction" style="background-image: url('img/oboe.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -559,8 +540,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/ring_of_indignation.png" />
+			<div class="relic-container damage_return" style="background-image: url('img/ring_of_indignation.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -572,8 +552,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/dark_mirror.png" />
+			<div class="relic-container damage_targeted_on_heal" style="background-image: url('img/dark_mirror.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -585,8 +564,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/bombulet.png" />
+			<div class="relic-container double_bombs" style="background-image: url('img/bombulet.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -598,8 +576,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/wand_of_greed.png" />
+			<div class="relic-container double_coins_and_prices" style="background-image: url('img/wand_of_greed.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -611,8 +588,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/bone_wand.png" />
+			<div class="relic-container double_damage_hurt_self" style="background-image: url('img/bone_wand.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -624,8 +600,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/trophy.png" />
+			<div class="relic-container dud_relic" style="background-image: url('img/trophy.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -637,8 +612,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/duplication_potion.png" />
+			<div class="relic-container duplicate_special_pegs" style="background-image: url('img/duplication_potion.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -650,8 +624,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/echo_chamber.png" />
+			<div class="relic-container echo_chamber" style="background-image: url('img/echo_chamber.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -663,8 +636,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/chalice.png" />
+			<div class="relic-container fewer_refresh" style="background-image: url('img/chalice.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -676,8 +648,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/unpretentious_pendant.png" />
+			<div class="relic-container fewer_crits" style="background-image: url('img/unpretentious_pendant.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -689,8 +660,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/decoy_2.png" />
+			<div class="relic-container free_reload" style="background-image: url('img/decoy_2.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -702,8 +672,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/grabby_hand.png" />
+			<div class="relic-container grabby_hand" style="background-image: url('img/grabby_hand.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -715,8 +684,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/thyme_to_grind.png" />
+			<div class="relic-container gain_max_hp_defeat_enemy" style="background-image: url('img/thyme_to_grind.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -728,8 +696,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/corn.png" />
+			<div class="relic-container heal_on_peg_hit" style="background-image: url('img/corn.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -741,8 +708,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/well-done-steak.png" />
+			<div class="relic-container heal_on_reload" style="background-image: url('img/well-done-steak.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -754,8 +720,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/cookie.png" />
+			<div class="relic-container heal_on_refresh" style="background-image: url('img/cookie.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -767,8 +732,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/hedge.png" />
+			<div class="relic-container hedge_bets" style="background-image: url('img/hedge.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -780,8 +744,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/divine_shield.png" />
+			<div class="relic-container immunity" style="background-image: url('img/divine_shield.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -793,8 +756,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/glove_36.png" />
+			<div class="relic-container increase_strength_small" style="background-image: url('img/glove_36.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -806,8 +768,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/chart_scroll.png" />
+			<div class="relic-container increased_navigation_gold" style="background-image: url('img/chart_scroll.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -819,8 +780,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/Clock.png" />
+			<div class="relic-container inflight_damage" style="background-image: url('img/Clock.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -832,8 +792,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/infernalgem.png" />
+			<div class="relic-container lifesteal_peg_hit" style="background-image: url('img/infernalgem.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -845,8 +804,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/knifesedge.png" />
+			<div class="relic-container low_health_guaranteed_crit" style="background-image: url('img/knifesedge.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -858,8 +816,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/demon_pact.png" />
+			<div class="relic-container low_health_increased_damage" style="background-image: url('img/demon_pact.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -871,8 +828,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/magnet.png" />
+			<div class="relic-container magnet" style="background-image: url('img/magnet.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -884,8 +840,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/doll.png" />
+			<div class="relic-container matryoshka" style="background-image: url('img/doll.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -897,8 +852,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/salt.png" />
+			<div class="relic-container max_health_incr" style="background-image: url('img/salt.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -910,8 +864,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/cake.png" />
+			<div class="relic-container max_health_large" style="background-image: url('img/cake.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -923,8 +876,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/food_85.png" />
+			<div class="relic-container max_health_medium" style="background-image: url('img/food_85.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -936,8 +888,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/fruit_01a.png" />
+			<div class="relic-container max_health_small" style="background-image: url('img/fruit_01a.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -949,8 +900,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/MentalMantlel.png" />
+			<div class="relic-container mental_mantle" style="background-image: url('img/MentalMantlel.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -962,8 +912,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/safety_net.png" />
+			<div class="relic-container minimum_guarantee" style="background-image: url('img/safety_net.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -975,8 +924,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/buckler.png" />
+			<div class="relic-container no_damage_on_reload" style="background-image: url('img/buckler.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -988,8 +936,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/axe-me-anything.png" />
+			<div class="relic-container no_damage_reduction" style="background-image: url('img/axe-me-anything.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -1001,8 +948,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/sealed_scroll.png" />
+			<div class="relic-container no_discard" style="background-image: url('img/sealed_scroll.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -1014,8 +960,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/basic_blade.png" />
+			<div class="relic-container non_crit_bonus_dmg" style="background-image: url('img/basic_blade.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -1027,8 +972,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/complex_claw.png" />
+			<div class="relic-container crit_bonus_dmg" style="background-image: url('img/complex_claw.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -1040,8 +984,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/hammer.png" />
+			<div class="relic-container overflow" style="background-image: url('img/hammer.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -1053,8 +996,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/book_03d.png" />
+			<div class="relic-container peg_to_bomb" style="background-image: url('img/book_03d.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -1066,8 +1008,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/pumpkin_pie.png" />
+			<div class="relic-container portal_slot" style="background-image: url('img/pumpkin_pie.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -1079,8 +1020,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/heart_pendant.png" />
+			<div class="relic-container post_battle_heal_increase" style="background-image: url('img/heart_pendant.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -1092,8 +1032,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/potion_02d.png" />
+			<div class="relic-container potion_pegs_count" style="background-image: url('img/potion_02d.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -1105,8 +1044,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/puppet.png" />
+			<div class="relic-container prevent_first_damage" style="background-image: url('img/puppet.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -1118,8 +1056,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/character_sheet.png" />
+			<div class="relic-container random_enemy_health" style="background-image: url('img/character_sheet.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -1131,8 +1068,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/haglins_satchel.png" />
+			<div class="relic-container random_orbs" style="background-image: url('img/haglins_satchel.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -1144,8 +1080,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/dungeon_die.png" />
+			<div class="relic-container randomize_orb" style="background-image: url('img/dungeon_die.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -1157,8 +1092,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/GardenerGloves.png" />
+			<div class="relic-container reduce_orb_self_damage" style="background-image: url('img/GardenerGloves.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -1170,8 +1104,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/LightShaft.png" />
+			<div class="relic-container refresh_also_crit" style="background-image: url('img/LightShaft.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -1183,8 +1116,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/refresher_course.png" />
+			<div class="relic-container refresh_buffs" style="background-image: url('img/refresher_course.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -1196,8 +1128,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/buster.png" />
+			<div class="relic-container refresh_damages_peg_count" style="background-image: url('img/buster.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -1209,8 +1140,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/refreshiv.png" />
+			<div class="relic-container refresh_on_enemy_death" style="background-image: url('img/refreshiv.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -1222,8 +1152,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/refreshield.png" />
+			<div class="relic-container refresh_on_reload" style="background-image: url('img/refreshield.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -1235,8 +1164,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/refreshing_punch.png" />
+			<div class="relic-container refresh_splash" style="background-image: url('img/refreshing_punch.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -1248,8 +1176,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/bell.png" />
+			<div class="relic-container reload_strength" style="background-image: url('img/bell.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -1261,8 +1188,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/scale-balanced.png" />
+			<div class="relic-container reload_balance" style="background-image: url('img/scale-balanced.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -1274,8 +1200,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/RingOfReuse.png" />
+			<div class="relic-container reuse_ring" style="background-image: url('img/RingOfReuse.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -1287,8 +1212,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/sand_arrows.png" />
+			<div class="relic-container sand_arrows" style="background-image: url('img/sand_arrows.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -1300,8 +1224,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/food_30.png" />
+			<div class="relic-container shuffle_refresh_peg" style="background-image: url('img/food_30.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -1313,8 +1236,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/poker_chip.png" />
+			<div class="relic-container slot_multipliers" style="background-image: url('img/poker_chip.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -1326,8 +1248,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/powder_collector.png" />
+			<div class="relic-container spawn_bomb_peg_hits" style="background-image: url('img/powder_collector.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -1339,8 +1260,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/spiral_slayer.png" />
+			<div class="relic-container strength_start" style="background-image: url('img/spiral_slayer.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -1352,8 +1272,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/boot.png" />
+			<div class="relic-container super_boots" style="background-image: url('img/boot.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -1365,8 +1284,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/belt.png" />
+			<div class="relic-container survive_lethal_attack" style="background-image: url('img/belt.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -1378,8 +1296,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/special_button.png" />
+			<div class="relic-container additional_crit1" style="background-image: url('img/special_button.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -1391,8 +1308,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/lucky_penny.png" />
+			<div class="relic-container three_crit" style="background-image: url('img/lucky_penny.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -1404,8 +1320,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/fresh_bandana.png" />
+			<div class="relic-container additional_refresh1" style="background-image: url('img/fresh_bandana.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -1417,8 +1332,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/ration_satchel.png" />
+			<div class="relic-container three_refresh" style="background-image: url('img/ration_satchel.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -1430,8 +1344,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/unicorn.png" />
+			<div class="relic-container unicorn_horn" style="background-image: url('img/unicorn.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -1443,8 +1356,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/gift_orange.png" />
+			<div class="relic-container unpoppable_pegs" style="background-image: url('img/gift_orange.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -1456,8 +1368,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/anvil.png" />
+			<div class="relic-container upgrade_added_orbs" style="background-image: url('img/anvil.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -1469,8 +1380,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/ripostal_service.png" />
+			<div class="relic-container ballwark_counter" style="background-image: url('img/ripostal_service.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -1482,8 +1392,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/essential_oil.png" />
+			<div class="relic-container armor_plus_one" style="background-image: url('img/essential_oil.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -1495,8 +1404,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/balladin_relic.png" />
+			<div class="relic-container start_with_ballwark" style="background-image: url('img/balladin_relic.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -1508,8 +1416,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/treasure_island.png" />
+			<div class="relic-container more_treasure_nodes" style="background-image: url('img/treasure_island.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -1521,8 +1428,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/knight_cap.png" />
+			<div class="relic-container heal_with_ballwark" style="background-image: url('img/knight_cap.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -1534,8 +1440,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/ballpeenhammer.png" />
+			<div class="relic-container ballpeen" style="background-image: url('img/ballpeenhammer.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -1547,8 +1452,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/meltingpot.png" />
+			<div class="relic-container fiery_furnace" style="background-image: url('img/meltingpot.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -1560,8 +1464,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/dumbbell.png" />
+			<div class="relic-container strength_plus_one" style="background-image: url('img/dumbbell.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -1573,8 +1476,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/broccoli.png" />
+			<div class="relic-container strength_on_refresh" style="background-image: url('img/broccoli.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -1586,8 +1488,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/Roundreloquence.png" />
+			<div class="relic-container random_status_effect_on_hit" style="background-image: url('img/Roundreloquence.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -1599,8 +1500,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/mask_of_sorrow.png" />
+			<div class="relic-container increase_neg_status" style="background-image: url('img/mask_of_sorrow.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -1612,8 +1512,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/grubby_hand.png" />
+			<div class="relic-container attacks_apply_poison" style="background-image: url('img/grubby_hand.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
@@ -1625,8 +1524,7 @@
 			</div>
         </div>
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/choke_mod.png" />
+			<div class="relic-container bombs_apply_poison" style="background-image: url('img/choke_mod.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">

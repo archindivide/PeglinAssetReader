@@ -22,13 +22,11 @@
 			margin-bottom: 5px;
 			margin-right: 5px;
 			padding: 5px;
-		}
-		
-        .relic-container img {
-            height: 50px;
-            width: 50px;
+			background-repeat: no-repeat;
+			background-position: 5px;
 			image-rendering: pixelated;
-        }
+			background-size: 50px;
+		}
 		
 		.tooltip {
 			position: relative;
@@ -61,13 +59,33 @@
 		.relic-description {
 			font-size: 14px;
 		}
+
+		/* customizations for individual resources to fix some images */
+		.bramble_blind_combo {
+			background-position: top left;
+			background-size: 180px;
+		}
+
+		.crit_pit {
+			background-position: top left;
+			background-size: 125px;
+		}
+
+		.inflight_damage {
+			background-position: 2px;
+			background-size: 300px;
+		}
+
+		.attacks_apply_poison {
+			background-position: top;
+			background-size: 160px;
+		}
     </style>
   </head>
   <body>
     {{#each relics}}
 		<div class="tooltip">
-			<div class="relic-container">
-				<img src="img/{{this.ImageFileName}}" />
+			<div class="relic-container {{this.LocKey}}" style="background-image: url('img/{{this.ImageFileName}}');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">

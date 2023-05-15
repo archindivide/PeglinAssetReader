@@ -15,6 +15,7 @@ var spriteImageFilePath = $"{assetPath}/Texture2D";
 var paramFile = $"{assetPath}/Scenes/Battle.unity";
 var outputPath = $"{Environment.CurrentDirectory}/output";
 var imageOutputPath = $"{outputPath}/img";
+var overwriteAssets = false;
 
 var ignoreKeys = new List<string>() 
 {
@@ -25,7 +26,7 @@ var ignoreKeys = new List<string>()
 };
 
 //Run AssetRipper to extract Peglin files from compiled code
-if (Directory.Exists(assetRipperOutputPath) && Directory.GetFileSystemEntries(assetRipperOutputPath).Length > 0)
+if (Directory.Exists(assetRipperOutputPath) && Directory.GetFileSystemEntries(assetRipperOutputPath).Length > 0 && !overwriteAssets)
 {
     Console.WriteLine("Skipping AssetRipper step because there are already files in the output path.");
 }
