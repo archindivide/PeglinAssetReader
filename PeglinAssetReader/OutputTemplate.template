@@ -62,9 +62,10 @@
 
 		/* customizations for individual resources to fix some images */
 		.bramble_blind_combo {
-			background-position: top left;
-			background-size: 180px;
-		}
+            background-size: 150px;
+            background-clip: content-box;
+            background-position: 5px 5px;
+        }
 
 		.crit_pit {
 			background-position: -15px -15px;
