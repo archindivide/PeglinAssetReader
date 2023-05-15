@@ -27,6 +27,7 @@
         .relic-container img {
             height: 50px;
             width: 50px;
+			image-rendering: pixelated;
         }
 		
 		.tooltip {
