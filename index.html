@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Peglin Relics</title>
-    <style>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Peglin Relics</title>
+	<meta name="description" content="A simple viewer for relics in the Peglin video game. Hover over images to see relic names and descriptions.">
+	<style>
 		body {
 			display: flex;
 			flex-direction: row;
@@ -13,8 +14,8 @@
 			font-family: Arial, sans-serif;
 			max-width: calc(100% - 150px);
 		}
-		
-        .relic-container {
+
+		.relic-container {
 			border: 2px solid #000000;
 			border-radius: 5px;
 			height: 50px;
@@ -27,45 +28,45 @@
 			image-rendering: pixelated;
 			background-size: 50px;
 		}
-		
+
 		.tooltip {
 			position: relative;
 			display: inline-block;
 		}
 
-		.tooltip .tooltiptext {
-			visibility: hidden;
-			width: 200px;
-			background-color: black;
-			color: #fff;
-			text-align: center;
-			border-radius: 6px;
-			padding: 5px;
+			.tooltip .tooltiptext {
+				visibility: hidden;
+				width: 200px;
+				background-color: black;
+				color: #fff;
+				text-align: center;
+				border-radius: 6px;
+				padding: 5px;
 
-			/* Position the tooltip */
-			position: absolute;
-			z-index: 1;
-		}
+				/* Position the tooltip */
+				position: absolute;
+				z-index: 1;
+			}
 
-		.tooltip:hover .tooltiptext {
-			visibility: visible;
-		}
-		
+			.tooltip:hover .tooltiptext {
+				visibility: visible;
+			}
+
 		.relic-name {
 			font-size: 18px;
 			font-weight: bold;
 		}
-		
+
 		.relic-description {
 			font-size: 14px;
 		}
 
 		/* customizations for individual resources to fix some images */
-        .bramble_blind_combo {
-            background-size: 150px;
-            background-clip: content-box;
-            background-position: 5px 5px;
-        }
+		.bramble_blind_combo {
+			background-size: 150px;
+			background-clip: content-box;
+			background-position: 5px 5px;
+		}
 
 		.crit_pit {
 			background-position: -15px -15px;
@@ -81,9 +82,10 @@
 			background-position: top;
 			background-size: 160px;
 		}
-    </style>
-  </head>
+	</style>
+</head>
   <body>
+		<h1>Peglin Relics</h1>
 		<div class="tooltip">
 			<div class="relic-container additional_bomb_damage" style="background-image: url('img/stoneblock_01a.png');" >
 			</div>

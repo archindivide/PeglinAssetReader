@@ -5,13 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Peglin Relics</title>
+	<meta name="description" content="A simple viewer for relics in the Peglin video game. Hover over images to see relic names and descriptions.">
     <style>
 		body {
+			font-family: Arial, sans-serif;
+			max-width: calc(100% - 150px);
+		}
+
+		.flex-container {
 			display: flex;
 			flex-direction: row;
 			flex-wrap: wrap;
-			font-family: Arial, sans-serif;
-			max-width: calc(100% - 150px);
 		}
 		
         .relic-container {
@@ -84,7 +88,9 @@
     </style>
   </head>
   <body>
-    {{#each relics}}
+	<h1>Peglin Relics</h1>
+	<div class="flex-container">
+		{{#each relics}}
 		<div class="tooltip">
 			<div class="relic-container {{this.LocKey}}" style="background-image: url('img/{{this.ImageFileName}}');" >
 			</div>
@@ -96,7 +102,8 @@
 					{{this.DescCombined}}
 				</div>
 			</div>
-        </div>
-    {{/each}}
+		</div>
+		{{/each}}
+	</div>
   </body>
 </html>
