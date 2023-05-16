@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Peglin Relics</title>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Peglin Relics</title>
 	<meta name="description" content="A simple viewer for relics in the Peglin video game. Hover over images to see relic names and descriptions.">
-	<style>
+    <style>
 		body {
-			display: flex;
-			flex-direction: row;
-			flex-wrap: wrap;
 			font-family: Arial, sans-serif;
 			max-width: calc(100% - 150px);
 		}
 
-		.relic-container {
+		.flex-container {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+		}
+		
+        .relic-container {
 			border: 2px solid #000000;
 			border-radius: 5px;
 			height: 50px;
@@ -28,45 +31,45 @@
 			image-rendering: pixelated;
 			background-size: 50px;
 		}
-
+		
 		.tooltip {
 			position: relative;
 			display: inline-block;
 		}
 
-			.tooltip .tooltiptext {
-				visibility: hidden;
-				width: 200px;
-				background-color: black;
-				color: #fff;
-				text-align: center;
-				border-radius: 6px;
-				padding: 5px;
+		.tooltip .tooltiptext {
+			visibility: hidden;
+			width: 200px;
+			background-color: black;
+			color: #fff;
+			text-align: center;
+			border-radius: 6px;
+			padding: 5px;
 
-				/* Position the tooltip */
-				position: absolute;
-				z-index: 1;
-			}
+			/* Position the tooltip */
+			position: absolute;
+			z-index: 1;
+		}
 
-			.tooltip:hover .tooltiptext {
-				visibility: visible;
-			}
-
+		.tooltip:hover .tooltiptext {
+			visibility: visible;
+		}
+		
 		.relic-name {
 			font-size: 18px;
 			font-weight: bold;
 		}
-
+		
 		.relic-description {
 			font-size: 14px;
 		}
 
 		/* customizations for individual resources to fix some images */
 		.bramble_blind_combo {
-			background-size: 150px;
-			background-clip: content-box;
-			background-position: 5px 5px;
-		}
+            background-size: 150px;
+            background-clip: content-box;
+            background-position: 5px 5px;
+        }
 
 		.crit_pit {
 			background-position: -15px -15px;
@@ -82,10 +85,11 @@
 			background-position: top;
 			background-size: 160px;
 		}
-	</style>
-</head>
+    </style>
+  </head>
   <body>
-		<h1>Peglin Relics</h1>
+	<h1>Peglin Relics</h1>
+	<div class="flex-container">
 		<div class="tooltip">
 			<div class="relic-container additional_bomb_damage" style="background-image: url('img/stoneblock_01a.png');" >
 			</div>
@@ -97,7 +101,7 @@
 					'Bombs deal +10 damage.'
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container additional_bomb_damage2" style="background-image: url('img/perfected_reactant.png');" >
 			</div>
@@ -109,7 +113,7 @@
 					'Bombs deal +15 damage.'
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container additional_bombs" style="background-image: url('img/bomb_rod.png');" >
 			</div>
@@ -121,7 +125,7 @@
 					Pegboards start with +3 Bombs.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container additional_discard" style="background-image: url('img/ambidextionary.png');" >
 			</div>
@@ -133,7 +137,7 @@
 					You have +1 orb discards.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container additional_gold" style="background-image: url('img/liquid_gold.png');" >
 			</div>
@@ -145,7 +149,7 @@
 					Battles start with 5 extra Coins.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container additional_orb_relic_options" style="background-image: url('img/turtle_eye.png');" >
 			</div>
@@ -157,7 +161,7 @@
 					Orb and relic battle rewards contain an additional option to choose from.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container additional_peglin_options" style="background-image: url('img/peglintuition.png');" >
 			</div>
@@ -169,7 +173,7 @@
 					Battle Rewards and Chests contain an additional option to choose from.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container adjacency_bonus" style="background-image: url('img/backpack.png');" >
 			</div>
@@ -181,7 +185,7 @@
 					Orbs receive +1/+2 for every following connected orb of the same type.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container aim_limiter" style="background-image: url('img/Constricting_Chains.png');" >
 			</div>
@@ -193,7 +197,7 @@
 					Orbs get +2 /+4 but you can only aim in 4 directions.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container all_attacks_pierce" style="background-image: url('img/ice_rod.png');" >
 			</div>
@@ -205,7 +209,7 @@
 					Projectile attacks pierce an additional enemy.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container all_bombs_rigged" style="background-image: url('img/sapper_sack.png');" >
 			</div>
@@ -217,7 +221,7 @@
 					All Bombs are replaced with Red Bombs and deal 2x damage to enemies.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container all_in" style="background-image: url('img/coin_single.png');" >
 			</div>
@@ -229,7 +233,7 @@
 					Attacks gain -1/+1 for every Critical Peg on the board.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container all_orbs_buff" style="background-image: url('img/buff_ring.png');" >
 			</div>
@@ -241,7 +245,7 @@
 					All attacks have -2/-3 but every Peg Activated gets upgraded (+2 damage).
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container all_orbs_morbid" style="background-image: url('img/defresh_potion.png');" >
 			</div>
@@ -253,7 +257,7 @@
 					All orbs get Morbid but boards contain one less Refresh Peg.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container alternate_shot_power" style="background-image: url('img/goblin_kings_curse_gold.png');" >
 			</div>
@@ -265,7 +269,7 @@
 					Every even shot will fire with 2x force, but every odd shot will fire with 0.5x force.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container basic_stone_bonus_damage" style="background-image: url('img/sling.png');" >
 			</div>
@@ -277,7 +281,7 @@
 					Stones get +1 /+2.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container battle_upgrades_heal_max_hp" style="background-image: url('img/toadem.png');" >
 			</div>
@@ -289,7 +293,7 @@
 					If you are at full health, post-battle healing instead allows you to increase your Max HP by 4.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container blind_when_hit" style="background-image: url('img/pocket_sand.png');" >
 			</div>
@@ -301,7 +305,7 @@
 					When an enemy hits you with a melee attack, apply Blind 10 to that enemy.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container bomb_force_always" style="background-image: url('img/material_11.png');" >
 			</div>
@@ -313,7 +317,7 @@
 					Every 3 Peg Hit provides explosive force until the board is refreshed.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container bomb_force_always_legacy" style="background-image: url('img/material_11.png');" >
 			</div>
@@ -325,7 +329,7 @@
 					Every Peg hit provides explosive force.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container bomb_splash" style="background-image: url('img/gunpowder.png');" >
 			</div>
@@ -337,7 +341,7 @@
 					'Bombs Activate nearby pegs when detonated.'
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container bombs_apply_blind" style="background-image: url('img/smoke_bomb.png');" >
 			</div>
@@ -349,7 +353,7 @@
 					'Bombs apply Blind 1 when damaging enemies.'
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container bombs_one_hit" style="background-image: url('img/candle_01b.png');" >
 			</div>
@@ -361,7 +365,7 @@
 					'Bombs detonate in one hit.'
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container bombs_respawn" style="background-image: url('img/recombombulator.png');" >
 			</div>
@@ -373,7 +377,7 @@
 					Previously thrown Bombs can now be refreshed, but Bombs deal -15 damage.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container bottom_bouncers_count" style="background-image: url('img/ring_050.png');" >
 			</div>
@@ -385,7 +389,7 @@
 					Bouncers contribute to damage.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container bounces_count" style="background-image: url('img/necklace_plain.png');" >
 			</div>
@@ -397,7 +401,7 @@
 					Wall bounces contribute to damage.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container bramble_blind_combo" style="background-image: url('img/branch_of_ember.png');" >
 			</div>
@@ -409,7 +413,7 @@
 					When applying Bramble to an enemy, apply Blind 2. When applying Blind to an un-Brambled enemy, apply Bramble 1.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container coins_contribute_to_damage" style="background-image: url('img/peglineros_pendant.png');" >
 			</div>
@@ -421,7 +425,7 @@
 					Collected Coins contribute to damage.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container confusion" style="background-image: url('img/helmet_16.png');" >
 			</div>
@@ -433,7 +437,7 @@
 					Orbs get +2 /+4 while you have any negative status effect. You start each battle with Confusion 4.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container convert_coin_to_damage" style="background-image: url('img/molten_mantle.png');" >
 			</div>
@@ -445,7 +449,7 @@
 					You no longer obtain Gold from Coins, but your current shot's total damage is dealt to the targeted enemy every 3 Coins you collect.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container create_gold_on_refresh" style="background-image: url('img/gold_green_ring.png');" >
 			</div>
@@ -457,7 +461,7 @@
 					Create 2 Coins whenever the board is refreshed.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container crit_also_refresh" style="background-image: url('img/HeavyShaft.png');" >
 			</div>
@@ -469,7 +473,7 @@
 					'Activated Critical Peg also refresh the board.'
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container crit_damages_enemies" style="background-image: url('img/critikris.png');" >
 			</div>
@@ -481,7 +485,7 @@
 					Whenever a Crit is triggered, deal your orb's Critical Peg damage to all enemies.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container crit_pit" style="background-image: url('img/map.png');" >
 			</div>
@@ -493,7 +497,7 @@
 					The board will contain 2 additional Critical Peg but hitting Critical Peg will send your orbs flying downwards.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container crits_stack" style="background-image: url('img/crit_fleece.png');" >
 			</div>
@@ -505,7 +509,7 @@
 					'Activating multiple Critical Peg increases damage per Peg by (Crit Damage - Regular Damage).'
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container crits_stack_ancient" style="background-image: url('img/crit_fleece.png');" >
 			</div>
@@ -517,7 +521,7 @@
 					Additional Crits increase shot damage by 1.3x.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container damage_enemies_on_reload" style="background-image: url('img/cheese.png');" >
 			</div>
@@ -529,7 +533,7 @@
 					'Deal (20 x # reloads) damage to all enemies when reloading.'
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container damage_reduction" style="background-image: url('img/oboe.png');" >
 			</div>
@@ -541,7 +545,7 @@
 					Whenever you would lose health, reduce the amount lost by 1.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container damage_return" style="background-image: url('img/ring_of_indignation.png');" >
 			</div>
@@ -553,7 +557,7 @@
 					Whenever you lose health, deal 2x that amount to all enemies.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container damage_targeted_on_heal" style="background-image: url('img/dark_mirror.png');" >
 			</div>
@@ -565,7 +569,7 @@
 					Whenever you heal lost health, deal that much damage to the targeted enemy.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container double_bombs" style="background-image: url('img/bombulet.png');" >
 			</div>
@@ -577,7 +581,7 @@
 					Pegboards start with 2x as many Bombs.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container double_coins_and_prices" style="background-image: url('img/wand_of_greed.png');" >
 			</div>
@@ -589,7 +593,7 @@
 					Battles start with twice as many Coins but all purchases are twice as expensive.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container double_damage_hurt_self" style="background-image: url('img/bone_wand.png');" >
 			</div>
@@ -601,7 +605,7 @@
 					Attacks deal 2x damage but you deal 3 self-damage for every 25 Peg Activated.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container dud_relic" style="background-image: url('img/trophy.png');" >
 			</div>
@@ -613,7 +617,7 @@
 					Do you feel consoled?
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container duplicate_special_pegs" style="background-image: url('img/duplication_potion.png');" >
 			</div>
@@ -625,7 +629,7 @@
 					When Critical Peg/Refresh Peg move, they leave a stationary copy at their previous position.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container echo_chamber" style="background-image: url('img/echo_chamber.png');" >
 			</div>
@@ -637,7 +641,7 @@
 					All attacks have Echo 10 .
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container fewer_refresh" style="background-image: url('img/chalice.png');" >
 			</div>
@@ -649,7 +653,7 @@
 					All orbs get +0 /+4 but boards contain one less Refresh Peg.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container fewer_crits" style="background-image: url('img/unpretentious_pendant.png');" >
 			</div>
@@ -661,7 +665,7 @@
 					All orbs get +2 /+0 but boards contain one less Critical Peg.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container free_reload" style="background-image: url('img/decoy_2.png');" >
 			</div>
@@ -673,7 +677,7 @@
 					Enemies don't get their extra turn(s) for your first reload.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container grabby_hand" style="background-image: url('img/grabby_hand.png');" >
 			</div>
@@ -685,7 +689,7 @@
 					Flying enemies are attacked horizontally, allowing for improved targeting.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container gain_max_hp_defeat_enemy" style="background-image: url('img/thyme_to_grind.png');" >
 			</div>
@@ -697,7 +701,7 @@
 					Whenever you defeat a non-minion enemy, gain 1 max health.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container heal_on_peg_hit" style="background-image: url('img/corn.png');" >
 			</div>
@@ -709,7 +713,7 @@
 					'Heal 1 for every 12 Peg Activated during battle.'
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container heal_on_reload" style="background-image: url('img/well-done-steak.png');" >
 			</div>
@@ -721,7 +725,7 @@
 					'Heal 6 when reloading.'
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container heal_on_refresh" style="background-image: url('img/cookie.png');" >
 			</div>
@@ -733,7 +737,7 @@
 					'Heal 2 every time the board is refreshed.'
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container hedge_bets" style="background-image: url('img/hedge.png');" >
 			</div>
@@ -745,7 +749,7 @@
 					Attacks gain +1 /+0 for every Critical Peg on the board.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container immunity" style="background-image: url('img/divine_shield.png');" >
 			</div>
@@ -757,7 +761,7 @@
 					You are immune to all damage.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container increase_strength_small" style="background-image: url('img/glove_36.png');" >
 			</div>
@@ -769,7 +773,7 @@
 					Attacks gain +1 /+1.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container increased_navigation_gold" style="background-image: url('img/chart_scroll.png');" >
 			</div>
@@ -781,7 +785,7 @@
 					Every Coins collected during navigation is worth 4 Gold.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container inflight_damage" style="background-image: url('img/Clock.png');" >
 			</div>
@@ -793,7 +797,7 @@
 					Deal extra damage the longer your orbs are in flight.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container lifesteal_peg_hit" style="background-image: url('img/infernalgem.png');" >
 			</div>
@@ -805,7 +809,7 @@
 					Steal 1 health from the selected enemy for every 5 Peg hit.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container low_health_guaranteed_crit" style="background-image: url('img/knifesedge.png');" >
 			</div>
@@ -817,7 +821,7 @@
 					Every shot is a crit when fired below 30% Health.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container low_health_increased_damage" style="background-image: url('img/demon_pact.png');" >
 			</div>
@@ -829,7 +833,7 @@
 					Deal 2x damage when your health is below 25%.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container magnet" style="background-image: url('img/magnet.png');" >
 			</div>
@@ -841,7 +845,7 @@
 					'Peg Bombs become weak magnets and Refresh Peg Critical Peg become strong magnets. Effect is full strength for 4s and gradually decreases over the next 8s.'
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container matryoshka" style="background-image: url('img/doll.png');" >
 			</div>
@@ -853,7 +857,7 @@
 					Every shot has +1 Multiball, but attacks get -2 /-2.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container max_health_incr" style="background-image: url('img/salt.png');" >
 			</div>
@@ -865,7 +869,7 @@
 					When you would gain max health, increase the amount gained by 1.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container max_health_large" style="background-image: url('img/cake.png');" >
 			</div>
@@ -877,7 +881,7 @@
 					Increases your max health by 50.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container max_health_medium" style="background-image: url('img/food_85.png');" >
 			</div>
@@ -889,7 +893,7 @@
 					Increases max health by 25.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container max_health_small" style="background-image: url('img/fruit_01a.png');" >
 			</div>
@@ -901,7 +905,7 @@
 					Increases your max health by 15.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container mental_mantle" style="background-image: url('img/MentalMantlel.png');" >
 			</div>
@@ -913,7 +917,7 @@
 					Immediately deal 1 damage to the targeted enemy for every 2 Peg Activated.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container minimum_guarantee" style="background-image: url('img/safety_net.png');" >
 			</div>
@@ -925,7 +929,7 @@
 					Orbs start with 5 Peg worth of damage.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container no_damage_on_reload" style="background-image: url('img/buckler.png');" >
 			</div>
@@ -937,7 +941,7 @@
 					You are immune to attack damage while reloading.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container no_damage_reduction" style="background-image: url('img/axe-me-anything.png');" >
 			</div>
@@ -949,7 +953,7 @@
 					Deal full damage to enemies with resistances.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container no_discard" style="background-image: url('img/sealed_scroll.png');" >
 			</div>
@@ -961,7 +965,7 @@
 					All attacks get +2/+2 but you have -1 orb discards.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container non_crit_bonus_dmg" style="background-image: url('img/basic_blade.png');" >
 			</div>
@@ -973,7 +977,7 @@
 					All attacks get +1/+0.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container crit_bonus_dmg" style="background-image: url('img/complex_claw.png');" >
 			</div>
@@ -985,7 +989,7 @@
 					All attacks get +0/+1.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container overflow" style="background-image: url('img/hammer.png');" >
 			</div>
@@ -997,7 +1001,7 @@
 					Projectile attacks have Overflow.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container peg_to_bomb" style="background-image: url('img/book_03d.png');" >
 			</div>
@@ -1009,7 +1013,7 @@
 					'Peg have a 7% chance to refresh into Bombs.'
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container portal_slot" style="background-image: url('img/pumpkin_pie.png');" >
 			</div>
@@ -1021,7 +1025,7 @@
 					Each shot, a random slot becomes a portal that can teleport orbs to the top of the pegboard up to 3x.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container post_battle_heal_increase" style="background-image: url('img/heart_pendant.png');" >
 			</div>
@@ -1033,7 +1037,7 @@
 					Post battle healing is increased by 1% for each orb in your deck. (+8%)
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container potion_pegs_count" style="background-image: url('img/potion_02d.png');" >
 			</div>
@@ -1045,7 +1049,7 @@
 					'Activated Refresh Peg Critical Peg contribute to damage.'
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container prevent_first_damage" style="background-image: url('img/puppet.png');" >
 			</div>
@@ -1057,7 +1061,7 @@
 					Prevent the first time you would lose health each battle.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container random_enemy_health" style="background-image: url('img/character_sheet.png');" >
 			</div>
@@ -1069,7 +1073,7 @@
 					Enemies start with random health.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container random_orbs" style="background-image: url('img/haglins_satchel.png');" >
 			</div>
@@ -1081,7 +1085,7 @@
 					Randomly adds 2 orbs to your deck, then randomly upgrades orbs 4 times.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container randomize_orb" style="background-image: url('img/dungeon_die.png');" >
 			</div>
@@ -1093,7 +1097,7 @@
 					When your deck is shuffled, each orb's Damage and Crit are randomly rolled between (Stat - 3) and (Stat + 3).
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container reduce_orb_self_damage" style="background-image: url('img/GardenerGloves.png');" >
 			</div>
@@ -1105,7 +1109,7 @@
 					Reduce self-damage from orbs by 50%.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container refresh_also_crit" style="background-image: url('img/LightShaft.png');" >
 			</div>
@@ -1117,7 +1121,7 @@
 					'Activated Refresh Peg also grants a crit.'
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container refresh_buffs" style="background-image: url('img/refresher_course.png');" >
 			</div>
@@ -1129,7 +1133,7 @@
 					Every 4 times the board is refreshed, randomly gain 1 Muscircle or 1 Spinesse.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container refresh_damages_peg_count" style="background-image: url('img/buster.png');" >
 			</div>
@@ -1141,7 +1145,7 @@
 					Whenever the board is refreshed, deal damage to all enemies equal to the number of pegs restored.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container refresh_on_enemy_death" style="background-image: url('img/refreshiv.png');" >
 			</div>
@@ -1153,7 +1157,7 @@
 					Whenever an enemy is defeated, refresh the board.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container refresh_on_reload" style="background-image: url('img/refreshield.png');" >
 			</div>
@@ -1165,7 +1169,7 @@
 					Refreshes the board on every reload.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container refresh_splash" style="background-image: url('img/refreshing_punch.png');" >
 			</div>
@@ -1177,7 +1181,7 @@
 					'Refresh Peg Activate nearby pegs when hit.'
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container reload_strength" style="background-image: url('img/bell.png');" >
 			</div>
@@ -1189,7 +1193,7 @@
 					Every reload grants +2 Muscircle.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container reload_balance" style="background-image: url('img/scale-balanced.png');" >
 			</div>
@@ -1201,7 +1205,7 @@
 					Every reload grants +1 Ballance.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container reuse_ring" style="background-image: url('img/RingOfReuse.png');" >
 			</div>
@@ -1213,7 +1217,7 @@
 					All orbs have +1 Persist.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container sand_arrows" style="background-image: url('img/sand_arrows.png');" >
 			</div>
@@ -1225,7 +1229,7 @@
 					Attacks apply Blind 4 to enemies.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container shuffle_refresh_peg" style="background-image: url('img/food_30.png');" >
 			</div>
@@ -1237,7 +1241,7 @@
 					'Refresh Peg moves after every shot.'
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container slot_multipliers" style="background-image: url('img/poker_chip.png');" >
 			</div>
@@ -1249,7 +1253,7 @@
 					Bottom slots gain multipliers that double or halve your shot damage.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container spawn_bomb_peg_hits" style="background-image: url('img/powder_collector.png');" >
 			</div>
@@ -1261,7 +1265,7 @@
 					Every 30 Peg hit is converted to Bombs.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container strength_start" style="background-image: url('img/spiral_slayer.png');" >
 			</div>
@@ -1273,7 +1277,7 @@
 					Start each battle with +1 Muscircle.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container super_boots" style="background-image: url('img/boot.png');" >
 			</div>
@@ -1285,7 +1289,7 @@
 					'Heal 1 for every Peg Hit while successfully navigating after battle, and take no damage from mis-navigation.'
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container survive_lethal_attack" style="background-image: url('img/belt.png');" >
 			</div>
@@ -1297,7 +1301,7 @@
 					Prevent the first time you would take lethal damage each battle.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container additional_crit1" style="background-image: url('img/special_button.png');" >
 			</div>
@@ -1309,7 +1313,7 @@
 					The board will contain 1 additional Critical Peg.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container three_crit" style="background-image: url('img/lucky_penny.png');" >
 			</div>
@@ -1321,7 +1325,7 @@
 					The board will contain 2 additional Critical Peg
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container additional_refresh1" style="background-image: url('img/fresh_bandana.png');" >
 			</div>
@@ -1333,7 +1337,7 @@
 					The board will contain 1 additional Refresh Peg.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container three_refresh" style="background-image: url('img/ration_satchel.png');" >
 			</div>
@@ -1345,7 +1349,7 @@
 					The board will contain 2 additional Refresh Peg.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container unicorn_horn" style="background-image: url('img/unicorn.png');" >
 			</div>
@@ -1357,7 +1361,7 @@
 					Your aimer is longer and displays an additional bounce.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container unpoppable_pegs" style="background-image: url('img/gift_orange.png');" >
 			</div>
@@ -1369,7 +1373,7 @@
 					All pegs have Durable.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container upgrade_added_orbs" style="background-image: url('img/anvil.png');" >
 			</div>
@@ -1381,7 +1385,7 @@
 					Whenever an orb is added to your deck, upgrade it and lose 4 HP.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container ballwark_counter" style="background-image: url('img/ripostal_service.png');" >
 			</div>
@@ -1393,7 +1397,7 @@
 					After you are attacked, the attacker receives damage equal to your remaining Ballwark.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container armor_plus_one" style="background-image: url('img/essential_oil.png');" >
 			</div>
@@ -1405,7 +1409,7 @@
 					Whenever Ballwark is gained, increase the amount gained by 1.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container start_with_ballwark" style="background-image: url('img/balladin_relic.png');" >
 			</div>
@@ -1417,7 +1421,7 @@
 					Start each battle with Ballwark 4.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container more_treasure_nodes" style="background-image: url('img/treasure_island.png');" >
 			</div>
@@ -1429,7 +1433,7 @@
 					'''?'' nodes have an increased 7% chance to be a treasure node.'
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container heal_with_ballwark" style="background-image: url('img/knight_cap.png');" >
 			</div>
@@ -1441,7 +1445,7 @@
 					If you have Ballwark remaining after battle, Heal 4.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container ballpeen" style="background-image: url('img/ballpeenhammer.png');" >
 			</div>
@@ -1453,7 +1457,7 @@
 					Whenever Shield Peg is created, gain 5 ballwark.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container fiery_furnace" style="background-image: url('img/meltingpot.png');" >
 			</div>
@@ -1465,7 +1469,7 @@
 					Whenever Shield Peg is destroyed, gain 5 ballwark.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container strength_plus_one" style="background-image: url('img/dumbbell.png');" >
 			</div>
@@ -1477,7 +1481,7 @@
 					Whenever you gain Muscircle, gain 1 additional.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container strength_on_refresh" style="background-image: url('img/broccoli.png');" >
 			</div>
@@ -1489,7 +1493,7 @@
 					Whenever the board is refreshed, gain 1 Muscircle.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container random_status_effect_on_hit" style="background-image: url('img/Roundreloquence.png');" >
 			</div>
@@ -1501,7 +1505,7 @@
 					Attacks apply a random debuff to the enemy
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container increase_neg_status" style="background-image: url('img/mask_of_sorrow.png');" >
 			</div>
@@ -1513,7 +1517,7 @@
 					When applying negative status effects to an enemy, increase the amount applied by 1.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container attacks_apply_poison" style="background-image: url('img/grubby_hand.png');" >
 			</div>
@@ -1525,7 +1529,7 @@
 					Attacks apply Spinfection 2 to enemies.
 				</div>
 			</div>
-        </div>
+		</div>
 		<div class="tooltip">
 			<div class="relic-container bombs_apply_poison" style="background-image: url('img/choke_mod.png');" >
 			</div>
@@ -1537,6 +1541,7 @@
 					'Bombs apply Spinfection 1 when damaging enemies.'
 				</div>
 			</div>
-        </div>
+		</div>
+	</div>
   </body>
 </html>
