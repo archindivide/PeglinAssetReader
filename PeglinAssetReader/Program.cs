@@ -34,7 +34,7 @@ else
 {
     var proc = new Process();
     proc.StartInfo.FileName = assetRipperPath;
-    proc.StartInfo.Arguments = $"{peglinPath} -o {assetRipperOutputPath} -q";
+    proc.StartInfo.Arguments = $"\"{peglinPath}\" -o {assetRipperOutputPath} -q";
     proc.Start();
     proc.WaitForExit();
     var exitCode = proc.ExitCode;

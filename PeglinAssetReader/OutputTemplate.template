@@ -87,7 +87,7 @@
 		}
 
 		.crits_provide_pierce {
-			background-size: 90px;
+			background-size: 135px;
 			background-clip: content-box;
 			background-position: 10px 5px;
 		}

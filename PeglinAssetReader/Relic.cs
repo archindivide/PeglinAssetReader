@@ -48,6 +48,7 @@
             .Replace("<sprite name=PEG>", "Peg")
             .Replace("<sprite name=\"PEG\">", "Peg")
             .Replace("<sprite name=\"PEG>", "Peg")
+            .Replace("<sprite name=\"PEG_CLEARED\">", "Cleared Peg")
             //remove styles, maybe should be applied instead
             .Replace("<style=dmg_bonus>", "")
             .Replace("<style=dmg_negative>", "")
