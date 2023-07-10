@@ -9,6 +9,7 @@ var assetRipperPath = ConfigurationManager.AppSettings["AssetRipperApplication"]
 var assetRipperOutputPath = $"{Environment.CurrentDirectory}/asset-ripper-output";
 var assetPath = $"{assetRipperOutputPath}/ExportedProject/Assets";
 var languageFile = $"{assetRipperOutputPath}/ExportedProject/Assets/Resources/I2Languages.asset";
+var versionFile = $"{assetRipperOutputPath}/ExportedProject/ProjectSettings/ProjectSettings.asset";
 var assetFilePath = $"{assetPath}/MonoBehaviour";
 var spriteMetaDataFilePath = $"{assetPath}/Sprite";
 var spriteImageFilePath = $"{assetPath}/Texture2D";
@@ -34,7 +35,7 @@ else
 {
     var proc = new Process();
     proc.StartInfo.FileName = assetRipperPath;
-    proc.StartInfo.Arguments = $"\"{peglinPath}\" -o {assetRipperOutputPath} -q";
+    proc.StartInfo.Arguments = $"\"{peglinPath}\" -o \"{assetRipperOutputPath}\" -q";
     proc.Start();
     proc.WaitForExit();
     var exitCode = proc.ExitCode;
@@ -147,6 +148,17 @@ while((index = nextIndex) < languageText.Length)
         Console.WriteLine($"Couldn't resolve resource: {resourceName}");
     }
 }
+
+//Parse version file
+var versionLines = File.ReadAllLines(versionFile);
+
+if (versionLines == null)
+{
+    Console.WriteLine("Version File not found or couldn't be read");
+    return;
+}
+
+var versionNumber = versionLines.Where(v => v.Contains("bundleVersion")).FirstOrDefault()?.Split(":")[1];
 
 //Load all the asset files
 List<string> fileTexts = new List<string>();
@@ -261,6 +273,7 @@ var template = Handlebars.Compile(File.ReadAllText($"{Environment.CurrentDirecto
 var data = new
 {
     relics = outputSet,
+    version = versionNumber
 };
 
 var result = template(data);
