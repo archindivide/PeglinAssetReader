@@ -9,7 +9,7 @@
     {
         get
         {
-            return Desc ?? Desc2 ?? Desc3;
+            return Desc3 ?? Desc2 ?? Desc;
         }
     }
     public string? SpriteGuid { get; set; }
