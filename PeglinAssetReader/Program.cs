@@ -199,7 +199,7 @@ foreach (var relic in relics.Where(r => r.SpriteGuid != null))
     if (file.Value != null)
     {
         var baseFileName = file.Key.Substring(file.Key.LastIndexOf('\\') + 1, file.Key.Length - (file.Key.LastIndexOf('\\') + 1));
-        var replaceExtension = baseFileName.Replace(".asset.meta", ".png");
+        var replaceExtension = baseFileName.Replace(".asset.meta", ".png").Replace(".png.meta", ".png");
         var removeOtherStuff = replaceExtension.Replace(" 0", "");
         relic.ImageFileName = removeOtherStuff;
     }
