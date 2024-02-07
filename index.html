@@ -95,7 +95,7 @@
     </style>
   </head>
   <body>
-	<h1>Peglin Relics (v 0.9.32)</h1>
+	<h1>Peglin Relics (v 0.9.44)</h1>
 	<p>A simple viewer for relics in the Peglin video game. Hover over images to see relic names and descriptions.</p>
 	<div class="flex-container">
 		<div class="tooltip">
@@ -202,7 +202,7 @@
 					Constricting Chains
 				</div>
 				<div class="relic-description">
-					Orbs get +2 /+4 but you can only aim in 4 directions.
+					Every orb will fire a copy of itself in the opposite of the aimed direction, but you can only aim in 4 directions.
 				</div>
 			</div>
 		</div>
@@ -250,7 +250,7 @@
 					Glorious SuffeRing
 				</div>
 				<div class="relic-description">
-					All attacks have -2/-3 but every Peg Activated gets upgraded (+2 damage).
+					All attacks have -4/-4 but every Peg Activated gets upgraded (+4 damage).
 				</div>
 			</div>
 		</div>
@@ -707,6 +707,18 @@
 				</div>
 				<div class="relic-description">
 					Whenever you defeat a non-minion enemy, gain 1 max health.
+				</div>
+			</div>
+		</div>
+		<div class="tooltip">
+			<div class="relic-container healing_slime" style="background-image: url('img/slimy_salve.png');" >
+			</div>
+			<div class="tooltiptext">
+				<div class="relic-name">
+					Slimy Salve
+				</div>
+				<div class="relic-description">
+					Applies Healing Slime to every 35 Peg hit, which makes the peg Durable and heals 1 when hit.
 				</div>
 			</div>
 		</div>
@@ -1402,7 +1414,7 @@
 					Perfect Forger
 				</div>
 				<div class="relic-description">
-					Whenever an orb is added to your deck, upgrade it and take 4 damage.
+					Whenever an upgradeable orb is added to your deck, upgrade it and take 4 damage.
 				</div>
 			</div>
 		</div>
@@ -1582,7 +1594,7 @@
 					Bag of Orange Pegs
 				</div>
 				<div class="relic-description">
-					Attacks get an increasing damage multiplier based on the number of Cleared Peg
+					Attacks get an increasing damage multiplier based on the number of Cleared Peg or removed Peg
 				</div>
 			</div>
 		</div>
@@ -1606,7 +1618,7 @@
 					A Good Slime
 				</div>
 				<div class="relic-description">
-					Whenever slime is applied to Peg it gets upgraded +2.
+					Whenever slime is applied to Peg it gets upgraded +5.
 				</div>
 			</div>
 		</div>
@@ -1666,7 +1678,7 @@
 					Leaf The Rest For Later
 				</div>
 				<div class="relic-description">
-					The board will contain 10 additional Refresh Peg but each refresh only refreshes 4 Peg
+					The board will contain 10 additional Refresh Peg but each refresh only refreshes 5 Peg
 				</div>
 			</div>
 		</div>
@@ -1798,7 +1810,7 @@
 					Beleaguered Boots
 				</div>
 				<div class="relic-description">
-					Your Ballusion cap is doubled.
+					Your Ballusion cap is increased to 300.
 				</div>
 			</div>
 		</div>
@@ -1810,7 +1822,103 @@
 					Distraction Reaction
 				</div>
 				<div class="relic-description">
-					Whenever you lose X health from an enemy attack, you gain X Ballusion.
+					Whenever you lose X health, you gain X Ballusion.
+				</div>
+			</div>
+		</div>
+		<div class="tooltip">
+			<div class="relic-container ballusion_dodge_grants_crit" style="background-image: url('img/redoublet.png');" >
+			</div>
+			<div class="tooltiptext">
+				<div class="relic-name">
+					Redoublet
+				</div>
+				<div class="relic-description">
+					Whenever you evade an attack using Ballusion, convert 2 Peg to Critical Peg
+				</div>
+			</div>
+		</div>
+		<div class="tooltip">
+			<div class="relic-container all_orbs_debuff" style="background-image: url('img/downgrade_ring.png');" >
+			</div>
+			<div class="tooltiptext">
+				<div class="relic-name">
+					Endless DevouRing
+				</div>
+				<div class="relic-description">
+					Attacks deal 2x damage but every Peg Activated gets downgraded (-4 damage).
+				</div>
+			</div>
+		</div>
+		<div class="tooltip">
+			<div class="relic-container self_damage_gain_ballwark" style="background-image: url('img/bastion_reaction.png');" >
+			</div>
+			<div class="tooltiptext">
+				<div class="relic-name">
+					Bastion Reaction
+				</div>
+				<div class="relic-description">
+					After losing health from self-damage, gain Ballwark equal to 2x health lost.
+				</div>
+			</div>
+		</div>
+		<div class="tooltip">
+			<div class="relic-container on_discard_gain_crit_ballusion" style="background-image: url('img/is_dis_your_card.png');" >
+			</div>
+			<div class="tooltiptext">
+				<div class="relic-name">
+					Is Dis Your Card
+				</div>
+				<div class="relic-description">
+					On discard, gain Ballusion equal to 2x the discarded orb's crit damage.
+				</div>
+			</div>
+		</div>
+		<div class="tooltip">
+			<div class="relic-container upgrade_discarded_orbs" style="background-image: url('img/modest_mallet.png');" >
+			</div>
+			<div class="tooltiptext">
+				<div class="relic-name">
+					Modest Mallet
+				</div>
+				<div class="relic-description">
+					Whenever you discard an upgradeable orb, upgrade it until end of combat and take 2 damage.
+				</div>
+			</div>
+		</div>
+		<div class="tooltip">
+			<div class="relic-container crits_add_spinesse" style="background-image: url('img/mauliflower.png');" >
+			</div>
+			<div class="tooltiptext">
+				<div class="relic-name">
+					Mauliflower
+				</div>
+				<div class="relic-description">
+					Every 3 times a crit is triggered, gain 1 Spinesse.
+				</div>
+			</div>
+		</div>
+		<div class="tooltip">
+			<div class="relic-container refreshed_pegs_get_upgraded" style="background-image: url('img/refresh_perspective.png');" >
+			</div>
+			<div class="tooltiptext">
+				<div class="relic-name">
+					Refresh Perspective
+				</div>
+				<div class="relic-description">
+					Whenever a Peg is refreshed it gets upgraded +1.
+				</div>
+			</div>
+		</div>
+		<div class="tooltip">
+			<div class="relic-container high_ballusion_guaranteed_crit" style="background-image: url('img/steady_scope.png');" >
+			</div>
+			<div class="tooltiptext">
+				<div class="relic-name">
+					Steady Scope
+				</div>
+				<div class="relic-description">
+					Every shot fired has a (2x your Ballusion)% chance to trigger a crit.
 				</div>
 			</div>
 		</div>

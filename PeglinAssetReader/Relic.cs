@@ -43,6 +43,7 @@
             .Replace("<sprite name=\"COIN_ONLY\">", "Coins")
             .Replace("<sprite name=\"GOLD\">", "Gold")
             .Replace("<sprite name=\"CRIT_PEG\">", "Critical Peg")
+            .Replace("<sprite name=\"TEMP_CRIT\">", "Critical Peg")
             .Replace("<sprite name=\"REFRESH_PEG\">", "Refresh Peg")
             .Replace("<sprite name=\"PEG_SHIELDED\">", "Shield Peg")
             .Replace("<sprite name=PEG>", "Peg")
