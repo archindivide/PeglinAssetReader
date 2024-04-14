@@ -76,6 +76,7 @@
             .Replace("<style=poison>", "")
             .Replace("<style=dodge>", "")
             .Replace("<style=exploitaball>", "")
+            .Replace("<style=transpherency>", "")
             .Replace("</style>", "")
             //manual fixes
             .Replace("{[STR_RELOAD_COUNT]} reloads", "reload")
