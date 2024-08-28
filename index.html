@@ -90,18 +90,42 @@
     </style>
   </head>
   <body>
-	<h1>Peglin Relics (v 0.9.56)</h1>
+	<h1>Peglin Relics (v 1.0.1)</h1>
 	<p>A simple viewer for relics in the Peglin video game. Hover over images to see relic names and descriptions.</p>
 	<div class="flex-container">
 		<div class="tooltip">
-			<div class="relic-container additional_bomb_damage" style="background-image: url('img/stoneblock_01a.png');" >
+			<div class="relic-container a_good_slime" style="background-image: url('img/a_good_slime2.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
-					Improved Catalyst
+					A Good Slime
 				</div>
 				<div class="relic-description">
-					'Bombs deal +10 damage.'
+					Whenever slime is applied to Peg it gets upgraded +5.
+				</div>
+			</div>
+		</div>
+		<div class="tooltip">
+			<div class="relic-container abacus" style="background-image: url('img/abacus.png');" >
+			</div>
+			<div class="tooltiptext">
+				<div class="relic-name">
+					Stacked Orbacus
+				</div>
+				<div class="relic-description">
+					Every enemy starts with 3 Exploitaball.
+				</div>
+			</div>
+		</div>
+		<div class="tooltip">
+			<div class="relic-container add_ballusion_with_spawns" style="background-image: url('img/fast_reakaton.png');" >
+			</div>
+			<div class="tooltiptext">
+				<div class="relic-name">
+					Fast Reakaton
+				</div>
+				<div class="relic-description">
+					Whenever an enemy spawns, gain 10 Ballusion.
 				</div>
 			</div>
 		</div>
@@ -118,6 +142,18 @@
 			</div>
 		</div>
 		<div class="tooltip">
+			<div class="relic-container additional_bomb_damage" style="background-image: url('img/stoneblock_01a.png');" >
+			</div>
+			<div class="tooltiptext">
+				<div class="relic-name">
+					Improved Catalyst
+				</div>
+				<div class="relic-description">
+					'Bombs deal +10 damage.'
+				</div>
+			</div>
+		</div>
+		<div class="tooltip">
 			<div class="relic-container additional_bombs" style="background-image: url('img/bomb_rod.png');" >
 			</div>
 			<div class="tooltiptext">
@@ -126,6 +162,18 @@
 				</div>
 				<div class="relic-description">
 					Pegboards start with +3 Bombs.
+				</div>
+			</div>
+		</div>
+		<div class="tooltip">
+			<div class="relic-container additional_crit1" style="background-image: url('img/special_button.png');" >
+			</div>
+			<div class="tooltiptext">
+				<div class="relic-name">
+					Special Button
+				</div>
+				<div class="relic-description">
+					The board will contain 1 additional Critical Peg.
 				</div>
 			</div>
 		</div>
@@ -173,7 +221,19 @@
 					Peglintuition
 				</div>
 				<div class="relic-description">
-					Battle Rewards and Chests contain an additional option to choose from.
+					Battle rewards and chests contain an additional option to choose from.
+				</div>
+			</div>
+		</div>
+		<div class="tooltip">
+			<div class="relic-container additional_refresh1" style="background-image: url('img/fresh_bandana.png');" >
+			</div>
+			<div class="tooltiptext">
+				<div class="relic-name">
+					Fresh Bandana
+				</div>
+				<div class="relic-description">
+					The board will contain 1 additional Refresh Peg.
 				</div>
 			</div>
 		</div>
@@ -209,7 +269,7 @@
 					Prime Rod of Frost
 				</div>
 				<div class="relic-description">
-					Projectile attacks pierce an additional enemy.
+					Every prime numbered shot pierces an additional enemy.
 				</div>
 			</div>
 		</div>
@@ -250,6 +310,30 @@
 			</div>
 		</div>
 		<div class="tooltip">
+			<div class="relic-container all_orbs_debuff" style="background-image: url('img/downgrade_ring.png');" >
+			</div>
+			<div class="tooltiptext">
+				<div class="relic-name">
+					Endless DevouRing
+				</div>
+				<div class="relic-description">
+					Attacks deal 2x damage but every Peg Activated gets downgraded (-3 damage).
+				</div>
+			</div>
+		</div>
+		<div class="tooltip">
+			<div class="relic-container all_orbs_destroy_pegs" style="background-image: url('img/reaper.png');" >
+			</div>
+			<div class="tooltiptext">
+				<div class="relic-name">
+					Call of the Void
+				</div>
+				<div class="relic-description">
+					'Hit Peg are &lt;style=Destroy&gt;destroyed.'
+				</div>
+			</div>
+		</div>
+		<div class="tooltip">
 			<div class="relic-container all_orbs_morbid" style="background-image: url('img/defresh_potion.png');" >
 			</div>
 			<div class="tooltiptext">
@@ -257,7 +341,7 @@
 					Defresh Potion
 				</div>
 				<div class="relic-description">
-					All orbs get Morbid but boards contain one less Refresh Peg.
+					&quot;All orbs get Morbid but boards contain\n half as many &lt;sprite name=\&quot;REFRESH_PEG\&quot;&gt; (rounded down).&quot;
 				</div>
 			</div>
 		</div>
@@ -270,6 +354,114 @@
 				</div>
 				<div class="relic-description">
 					Every even shot will fire with 2x force, but every odd shot will fire with 0.5x force.
+				</div>
+			</div>
+		</div>
+		<div class="tooltip">
+			<div class="relic-container armor_plus_one" style="background-image: url('img/essential_oil.png');" >
+			</div>
+			<div class="tooltiptext">
+				<div class="relic-name">
+					Essential Oil
+				</div>
+				<div class="relic-description">
+					Whenever Ballwark is gained, increase the amount gained by 2.
+				</div>
+			</div>
+		</div>
+		<div class="tooltip">
+			<div class="relic-container attacks_apply_exploitaball" style="background-image: url('img/spiffy_crit.png');" >
+			</div>
+			<div class="tooltiptext">
+				<div class="relic-name">
+					Spiffy Crit
+				</div>
+				<div class="relic-description">
+					Attacks apply 1 Exploitaball to enemies, or 2 Exploitaball on crit.
+				</div>
+			</div>
+		</div>
+		<div class="tooltip">
+			<div class="relic-container attacks_apply_poison" style="background-image: url('img/grubby_hand.png');" >
+			</div>
+			<div class="tooltiptext">
+				<div class="relic-name">
+					Grubby Gloves
+				</div>
+				<div class="relic-description">
+					Attacks apply Spinfection 1 to enemies.
+				</div>
+			</div>
+		</div>
+		<div class="tooltip">
+			<div class="relic-container attacks_apply_transpherency" style="background-image: url('img/clear_the_way.png');" >
+			</div>
+			<div class="tooltiptext">
+				<div class="relic-name">
+					Clear The Way!
+				</div>
+				<div class="relic-description">
+					Attacks apply 2 Transpherency to enemies.
+				</div>
+			</div>
+		</div>
+		<div class="tooltip">
+			<div class="relic-container bag_of_orange_pegs" style="background-image: url('img/bag_of_orange_pegs.png');" >
+			</div>
+			<div class="tooltiptext">
+				<div class="relic-name">
+					Bag of Orange Pegs
+				</div>
+				<div class="relic-description">
+					Attacks get an increasing damage multiplier based on the number of Cleared Peg or removed Peg
+				</div>
+			</div>
+		</div>
+		<div class="tooltip">
+			<div class="relic-container ballpeen" style="background-image: url('img/ballpeenhammer.png');" >
+			</div>
+			<div class="tooltiptext">
+				<div class="relic-name">
+					Ballpeen Hammer
+				</div>
+				<div class="relic-description">
+					Whenever Shield Peg is created, gain 4 Ballwark.
+				</div>
+			</div>
+		</div>
+		<div class="tooltip">
+			<div class="relic-container ballusion_dodge_grants_crit" style="background-image: url('img/redoublet.png');" >
+			</div>
+			<div class="tooltiptext">
+				<div class="relic-name">
+					Redoublet
+				</div>
+				<div class="relic-description">
+					Whenever you evade an attack, convert 2 Peg to Critical Peg.
+				</div>
+			</div>
+		</div>
+		<div class="tooltip">
+			<div class="relic-container ballusion_on_crit" style="background-image: url('img/vitamin_c.png');" >
+			</div>
+			<div class="tooltiptext">
+				<div class="relic-name">
+					Vitamin C!
+				</div>
+				<div class="relic-description">
+					Whenever a crit is triggered, gain 10 Ballusion.
+				</div>
+			</div>
+		</div>
+		<div class="tooltip">
+			<div class="relic-container ballwark_counter" style="background-image: url('img/ripostal_service.png');" >
+			</div>
+			<div class="tooltiptext">
+				<div class="relic-name">
+					Ripostal Service
+				</div>
+				<div class="relic-description">
+					After you are attacked, the attacker receives damage equal to 5x your remaining Ballwark.
 				</div>
 			</div>
 		</div>
@@ -358,6 +550,30 @@
 			</div>
 		</div>
 		<div class="tooltip">
+			<div class="relic-container bombs_apply_poison" style="background-image: url('img/choke_mod.png');" >
+			</div>
+			<div class="tooltiptext">
+				<div class="relic-name">
+					Choke Mod
+				</div>
+				<div class="relic-description">
+					'Bombs apply Spinfection 1 when damaging enemies.'
+				</div>
+			</div>
+		</div>
+		<div class="tooltip">
+			<div class="relic-container bombs_nav_gold" style="background-image: url('img/reduce_refuse_recycle.png');" >
+			</div>
+			<div class="tooltiptext">
+				<div class="relic-name">
+					Reduce, Re-Fuse, Recycle
+				</div>
+				<div class="relic-description">
+					'Bombs detonated while navigating provide 5 Gold.'
+				</div>
+			</div>
+		</div>
+		<div class="tooltip">
 			<div class="relic-container bombs_one_hit" style="background-image: url('img/candle_01b.png');" >
 			</div>
 			<div class="tooltiptext">
@@ -406,6 +622,18 @@
 			</div>
 		</div>
 		<div class="tooltip">
+			<div class="relic-container bouncy_walls_and_bouncers" style="background-image: url('img/house_of_slime.png');" >
+			</div>
+			<div class="tooltiptext">
+				<div class="relic-name">
+					House of Slime
+				</div>
+				<div class="relic-description">
+					Walls and bottom bouncers are extra bouncy.
+				</div>
+			</div>
+		</div>
+		<div class="tooltip">
 			<div class="relic-container bramble_blind_combo" style="background-image: url('img/branch_of_ember.png');" >
 			</div>
 			<div class="tooltiptext">
@@ -418,6 +646,18 @@
 			</div>
 		</div>
 		<div class="tooltip">
+			<div class="relic-container buff_first_peg_hit" style="background-image: url('img/adventurine.png');" >
+			</div>
+			<div class="tooltiptext">
+				<div class="relic-name">
+					Adventurine
+				</div>
+				<div class="relic-description">
+					The first Peg Hit by each orb gets +10
+				</div>
+			</div>
+		</div>
+		<div class="tooltip">
 			<div class="relic-container coins_contribute_to_damage" style="background-image: url('img/peglineros_pendant.png');" >
 			</div>
 			<div class="tooltiptext">
@@ -426,6 +666,42 @@
 				</div>
 				<div class="relic-description">
 					Collected Coins contribute to damage.
+				</div>
+			</div>
+		</div>
+		<div class="tooltip">
+			<div class="relic-container coins_for_healing" style="background-image: url('img/haglins_hat.png');" >
+			</div>
+			<div class="tooltiptext">
+				<div class="relic-name">
+					Haglin's Hat
+				</div>
+				<div class="relic-description">
+					'Heal 10 for every 100 Coins collected.'
+				</div>
+			</div>
+		</div>
+		<div class="tooltip">
+			<div class="relic-container coins_give_ballusion" style="background-image: url('img/flaunty_gauntlets.png');" >
+			</div>
+			<div class="tooltiptext">
+				<div class="relic-name">
+					Flaunty Gauntlets
+				</div>
+				<div class="relic-description">
+					Gain 1 Ballusion for every Coins collected.
+				</div>
+			</div>
+		</div>
+		<div class="tooltip">
+			<div class="relic-container coins_to_crits" style="background-image: url('img/lucky+cat.png');" >
+			</div>
+			<div class="tooltiptext">
+				<div class="relic-name">
+					Beckoning Crit
+				</div>
+				<div class="relic-description">
+					Every 11 Coins collected triggers a crit.
 				</div>
 			</div>
 		</div>
@@ -478,6 +754,18 @@
 			</div>
 		</div>
 		<div class="tooltip">
+			<div class="relic-container crit_bonus_dmg" style="background-image: url('img/complex_claw.png');" >
+			</div>
+			<div class="tooltiptext">
+				<div class="relic-name">
+					Complex Claw
+				</div>
+				<div class="relic-description">
+					All attacks get +0/+1.
+				</div>
+			</div>
+		</div>
+		<div class="tooltip">
 			<div class="relic-container crit_damages_enemies" style="background-image: url('img/critikris.png');" >
 			</div>
 			<div class="tooltiptext">
@@ -485,7 +773,7 @@
 					Critikris
 				</div>
 				<div class="relic-description">
-					Whenever a Crit is triggered, deal (your orb's Critical Peg x # crits) damage to all enemies.
+					Whenever a crit is triggered, deal (your orb's Critical Peg x # crits) damage to all enemies.
 				</div>
 			</div>
 		</div>
@@ -502,6 +790,42 @@
 			</div>
 		</div>
 		<div class="tooltip">
+			<div class="relic-container crits_add_spinesse" style="background-image: url('img/mauliflower.png');" >
+			</div>
+			<div class="tooltiptext">
+				<div class="relic-name">
+					Mauliflower
+				</div>
+				<div class="relic-description">
+					Every 3 times a crit is triggered, gain 1 Spinesse.
+				</div>
+			</div>
+		</div>
+		<div class="tooltip">
+			<div class="relic-container crits_provide_pierce" style="background-image: url('img/au_auger.png');" >
+			</div>
+			<div class="tooltiptext">
+				<div class="relic-name">
+					Au Auger
+				</div>
+				<div class="relic-description">
+					Each crit triggered for projectile attacks cause them to pierce an additional enemy.
+				</div>
+			</div>
+		</div>
+		<div class="tooltip">
+			<div class="relic-container crits_stack_ancient" style="background-image: url('img/crit_fleece.png');" >
+			</div>
+			<div class="tooltiptext">
+				<div class="relic-name">
+					Ancient Fleece
+				</div>
+				<div class="relic-description">
+					Additional crits increase shot damage by 1.3x.
+				</div>
+			</div>
+		</div>
+		<div class="tooltip">
 			<div class="relic-container crits_stack" style="background-image: url('img/crit_fleece.png');" >
 			</div>
 			<div class="tooltiptext">
@@ -514,14 +838,14 @@
 			</div>
 		</div>
 		<div class="tooltip">
-			<div class="relic-container crits_stack_ancient" style="background-image: url('img/crit_fleece.png');" >
+			<div class="relic-container damage_creates_damage_reduction_slime" style="background-image: url('img/subtraction_reaction.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
-					Ancient Fleece
+					Subtraction Reaction
 				</div>
 				<div class="relic-description">
-					Additional Crits increase shot damage by 1.3x.
+					At the start of your turn apply damage reduction slime to X Peg where X is the number of times you lost health last turn.
 				</div>
 			</div>
 		</div>
@@ -557,7 +881,7 @@
 					Ring of Indignation
 				</div>
 				<div class="relic-description">
-					Whenever you lose health, deal 2x that amount to all enemies.
+					Whenever you lose health, deal 7x that amount to all enemies.
 				</div>
 			</div>
 		</div>
@@ -570,6 +894,30 @@
 				</div>
 				<div class="relic-description">
 					Whenever you heal, deal 3x the recovered health as damage to the targeted enemy.
+				</div>
+			</div>
+		</div>
+		<div class="tooltip">
+			<div class="relic-container debuff_dodge" style="background-image: url('img/debuff_distractor.png');" >
+			</div>
+			<div class="tooltiptext">
+				<div class="relic-name">
+					Debuff Distractor
+				</div>
+				<div class="relic-description">
+					Gain 1 Ballusion for every stack of negative status effect you apply to an enemy.
+				</div>
+			</div>
+		</div>
+		<div class="tooltip">
+			<div class="relic-container double_ballusion_cap" style="background-image: url('img/beleaguered_boots.png');" >
+			</div>
+			<div class="tooltiptext">
+				<div class="relic-name">
+					Beleaguered Boots
+				</div>
+				<div class="relic-description">
+					Your Ballusion cap is increased to 300.
 				</div>
 			</div>
 		</div>
@@ -593,7 +941,7 @@
 					Wand of Skulltimate Greed
 				</div>
 				<div class="relic-description">
-					Battles start with twice as many Coins but all purchases are twice as expensive.
+					Battles start with 2.5x as many Coins but all purchases are twice as expensive.
 				</div>
 			</div>
 		</div>
@@ -602,10 +950,10 @@
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
-					Wand of Skulltimate Power
+					Wand of Skulltimate Wrath
 				</div>
 				<div class="relic-description">
-					Attacks deal 2x damage but you deal 3 self-damage for every 25 Peg Activated.
+					Attacks deal 2x damage but you deal 3 self-damage for every 30 Peg Activated.
 				</div>
 			</div>
 		</div>
@@ -646,6 +994,18 @@
 			</div>
 		</div>
 		<div class="tooltip">
+			<div class="relic-container fewer_crits" style="background-image: url('img/unpretentious_pendant.png');" >
+			</div>
+			<div class="tooltiptext">
+				<div class="relic-name">
+					Unpretentious Pendant
+				</div>
+				<div class="relic-description">
+					All orbs get +2/+0 but boards contain one less Critical Peg.
+				</div>
+			</div>
+		</div>
+		<div class="tooltip">
 			<div class="relic-container fewer_refresh" style="background-image: url('img/chalice.png');" >
 			</div>
 			<div class="tooltiptext">
@@ -658,14 +1018,14 @@
 			</div>
 		</div>
 		<div class="tooltip">
-			<div class="relic-container fewer_crits" style="background-image: url('img/unpretentious_pendant.png');" >
+			<div class="relic-container fiery_furnace" style="background-image: url('img/meltingpot.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
-					Unpretentious Pendant
+					Fiery Furnace
 				</div>
 				<div class="relic-description">
-					All orbs get +2/+0 but boards contain one less Critical Peg.
+					Whenever Shield Peg is destroyed, gain 4 Ballwark.
 				</div>
 			</div>
 		</div>
@@ -682,14 +1042,14 @@
 			</div>
 		</div>
 		<div class="tooltip">
-			<div class="relic-container grabby_hand" style="background-image: url('img/grabby_hand.png');" >
+			<div class="relic-container gain_ballusion_from_enemy_dmg" style="background-image: url('img/distraction_reaction.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
-					Grabby Hand
+					Distraction Reaction
 				</div>
 				<div class="relic-description">
-					Flying enemies are attacked horizontally, allowing for improved targeting.
+					Whenever you lose X health, gain X Ballusion.
 				</div>
 			</div>
 		</div>
@@ -706,14 +1066,62 @@
 			</div>
 		</div>
 		<div class="tooltip">
-			<div class="relic-container healing_slime" style="background-image: url('img/slimy_salve.png');" >
+			<div class="relic-container gaining_ballwark_gives_muscircle" style="background-image: url('img/tabard.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
-					Slimy Salve
+					Training Tabard
 				</div>
 				<div class="relic-description">
-					Applies Healing Slime to every 35 Peg hit, which makes the peg Durable and heals 1 when hit.
+					For every 10 Ballwark you gain, gain 1 Muscircle.
+				</div>
+			</div>
+		</div>
+		<div class="tooltip">
+			<div class="relic-container gaining_muscircle_gives_ballwark" style="background-image: url('img/addedAdvantarge.png');" >
+			</div>
+			<div class="tooltiptext">
+				<div class="relic-name">
+					Added Advantarge
+				</div>
+				<div class="relic-description">
+					Whenever an effect causes you to gain Muscircle, gain 2 Ballwark.
+				</div>
+			</div>
+		</div>
+		<div class="tooltip">
+			<div class="relic-container gamblin_iou" style="background-image: url('img/iou_note.png');" >
+			</div>
+			<div class="tooltiptext">
+				<div class="relic-name">
+					IOU
+				</div>
+				<div class="relic-description">
+					An extremely legitimate investment certificate (probably).
+				</div>
+			</div>
+		</div>
+		<div class="tooltip">
+			<div class="relic-container grabby_hand" style="background-image: url('img/grabby_hand.png');" >
+			</div>
+			<div class="tooltiptext">
+				<div class="relic-name">
+					Grabby Hand
+				</div>
+				<div class="relic-description">
+					'Flying enemies are attacked horizontally and take 1.5x damage from projectile attacks. '
+				</div>
+			</div>
+		</div>
+		<div class="tooltip">
+			<div class="relic-container halve_incoming_damage" style="background-image: url('img/torn_sash.png');" >
+			</div>
+			<div class="tooltiptext">
+				<div class="relic-name">
+					Torn Sash
+				</div>
+				<div class="relic-description">
+					All incoming damage is halved.
 				</div>
 			</div>
 		</div>
@@ -725,19 +1133,7 @@
 					Popping Corn
 				</div>
 				<div class="relic-description">
-					'Heal 1 for every 12 Peg Activated during battle.'
-				</div>
-			</div>
-		</div>
-		<div class="tooltip">
-			<div class="relic-container heal_on_reload" style="background-image: url('img/well-done-steak.png');" >
-			</div>
-			<div class="tooltiptext">
-				<div class="relic-name">
-					Well-Done Steak
-				</div>
-				<div class="relic-description">
-					'Heal 6 when reloading.'
+					'Heal 1 for every 15 Peg Activated during battle.'
 				</div>
 			</div>
 		</div>
@@ -754,6 +1150,42 @@
 			</div>
 		</div>
 		<div class="tooltip">
+			<div class="relic-container heal_on_reload" style="background-image: url('img/well-done-steak.png');" >
+			</div>
+			<div class="tooltiptext">
+				<div class="relic-name">
+					Well-Done Steak
+				</div>
+				<div class="relic-description">
+					'Heal 6 when reloading.'
+				</div>
+			</div>
+		</div>
+		<div class="tooltip">
+			<div class="relic-container heal_with_ballwark" style="background-image: url('img/knight_cap.png');" >
+			</div>
+			<div class="tooltiptext">
+				<div class="relic-name">
+					Knight Cap
+				</div>
+				<div class="relic-description">
+					If you have Ballwark remaining after battle, increase your Max HP by 2.
+				</div>
+			</div>
+		</div>
+		<div class="tooltip">
+			<div class="relic-container healing_slime" style="background-image: url('img/slimy_salve.png');" >
+			</div>
+			<div class="tooltiptext">
+				<div class="relic-name">
+					Slimy Salve
+				</div>
+				<div class="relic-description">
+					Applies Healing Slime to every 35 Peg hit, which makes the peg Durable and heals 1 when hit.
+				</div>
+			</div>
+		</div>
+		<div class="tooltip">
 			<div class="relic-container hedge_bets" style="background-image: url('img/hedge.png');" >
 			</div>
 			<div class="tooltiptext">
@@ -766,6 +1198,30 @@
 			</div>
 		</div>
 		<div class="tooltip">
+			<div class="relic-container high_ballusion_guaranteed_crit" style="background-image: url('img/steady_scope.png');" >
+			</div>
+			<div class="tooltiptext">
+				<div class="relic-name">
+					Steady Scope
+				</div>
+				<div class="relic-description">
+					Every shot fired has a (2x Ballusion)% chance to trigger a crit.
+				</div>
+			</div>
+		</div>
+		<div class="tooltip">
+			<div class="relic-container hitting_crit_adds_temp_crits" style="background-image: url('img/countercrit.png');" >
+			</div>
+			<div class="tooltiptext">
+				<div class="relic-name">
+					Counterfeit Crits
+				</div>
+				<div class="relic-description">
+					Whenever Critical Peg is Hit convert 2 Peg to Critical Peg.
+				</div>
+			</div>
+		</div>
+		<div class="tooltip">
 			<div class="relic-container immunity" style="background-image: url('img/divine_shield.png');" >
 			</div>
 			<div class="tooltiptext">
@@ -774,6 +1230,30 @@
 				</div>
 				<div class="relic-description">
 					You are immune to all damage.
+				</div>
+			</div>
+		</div>
+		<div class="tooltip">
+			<div class="relic-container increase_neg_status" style="background-image: url('img/mask_of_sorrow.png');" >
+			</div>
+			<div class="tooltiptext">
+				<div class="relic-name">
+					Mask of Sorrow
+				</div>
+				<div class="relic-description">
+					When applying negative status effects to an enemy, increase the amount applied by 1.
+				</div>
+			</div>
+		</div>
+		<div class="tooltip">
+			<div class="relic-container increase_pos_status" style="background-image: url('img/mask_of_joy.png');" >
+			</div>
+			<div class="tooltiptext">
+				<div class="relic-name">
+					Mask of Joy
+				</div>
+				<div class="relic-description">
+					When applying positive status effects to yourself, increase the amount applied by 1.
 				</div>
 			</div>
 		</div>
@@ -822,6 +1302,18 @@
 				</div>
 				<div class="relic-description">
 					Steal 1 health from the selected enemy for every 5 Peg hit.
+				</div>
+			</div>
+		</div>
+		<div class="tooltip">
+			<div class="relic-container lose_ballwark_gain_ballance" style="background-image: url('img/piece_of_mind.png');" >
+			</div>
+			<div class="tooltiptext">
+				<div class="relic-name">
+					Piece Of Mind
+				</div>
+				<div class="relic-description">
+					Whenever you lose your last Ballwark, gain 1 Ballance.
 				</div>
 			</div>
 		</div>
@@ -881,7 +1373,7 @@
 					Salt Shaker
 				</div>
 				<div class="relic-description">
-					When you would gain max health, increase the amount gained by 1.
+					When gaining max health, increase the amount gained by 1.
 				</div>
 			</div>
 		</div>
@@ -946,6 +1438,18 @@
 			</div>
 		</div>
 		<div class="tooltip">
+			<div class="relic-container more_treasure_nodes" style="background-image: url('img/treasure_island.png');" >
+			</div>
+			<div class="tooltiptext">
+				<div class="relic-name">
+					Orbert's Story
+				</div>
+				<div class="relic-description">
+					'''?'' nodes have a +7% chance to be a treasure node and treasure has a +7% chance to be rare.'
+				</div>
+			</div>
+		</div>
+		<div class="tooltip">
 			<div class="relic-container multiball_every_x" style="background-image: url('img/duplicator.png');" >
 			</div>
 			<div class="tooltiptext">
@@ -1006,14 +1510,26 @@
 			</div>
 		</div>
 		<div class="tooltip">
-			<div class="relic-container crit_bonus_dmg" style="background-image: url('img/complex_claw.png');" >
+			<div class="relic-container on_discard_gain_crit_ballusion" style="background-image: url('img/is_dis_your_card.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
-					Complex Claw
+					Is Dis Your Card
 				</div>
 				<div class="relic-description">
-					All attacks get +0/+1.
+					On discard, gain Ballusion equal to 2x the discarded orb's crit damage.
+				</div>
+			</div>
+		</div>
+		<div class="tooltip">
+			<div class="relic-container only_minibosses" style="background-image: url('img/only_minibosses_relic_temp.png');" >
+			</div>
+			<div class="tooltiptext">
+				<div class="relic-name">
+					Miniboss Meetup
+				</div>
+				<div class="relic-description">
+					Every node is a miniboss.
 				</div>
 			</div>
 		</div>
@@ -1037,7 +1553,19 @@
 					Alchemist's Cookbook
 				</div>
 				<div class="relic-description">
-					'Peg have a 7% chance to refresh into Bombs.'
+					'Peg have a 5% chance to refresh into Bombs.'
+				</div>
+			</div>
+		</div>
+		<div class="tooltip">
+			<div class="relic-container poison_inc" style="background-image: url('img/spinsepsion.png');" >
+			</div>
+			<div class="tooltiptext">
+				<div class="relic-name">
+					Spinsepsion
+				</div>
+				<div class="relic-description">
+					Enemy Spinfection will increase each turn instead of decreasing.
 				</div>
 			</div>
 		</div>
@@ -1090,6 +1618,18 @@
 			</div>
 		</div>
 		<div class="tooltip">
+			<div class="relic-container prime_slime" style="background-image: url('img/prime_slime.png');" >
+			</div>
+			<div class="tooltiptext">
+				<div class="relic-name">
+					Prime Slime
+				</div>
+				<div class="relic-description">
+					Every 17 Peg Hit has a random positive slime applied.
+				</div>
+			</div>
+		</div>
+		<div class="tooltip">
 			<div class="relic-container random_enemy_health" style="background-image: url('img/character_sheet.png');" >
 			</div>
 			<div class="tooltiptext">
@@ -1109,7 +1649,19 @@
 					Haglin's Satchel
 				</div>
 				<div class="relic-description">
-					Randomly adds 2 orbs to your deck, then randomly upgrades orbs 4 times.
+					Randomly adds 2 rare orbs to your deck, then randomly upgrades orbs 5 times.
+				</div>
+			</div>
+		</div>
+		<div class="tooltip">
+			<div class="relic-container random_status_effect_on_hit" style="background-image: url('img/Roundreloquence.png');" >
+			</div>
+			<div class="tooltiptext">
+				<div class="relic-name">
+					Roundreloquence
+				</div>
+				<div class="relic-description">
+					Attacks apply a random debuff to the enemy
 				</div>
 			</div>
 		</div>
@@ -1121,7 +1673,7 @@
 					Dungeon Die
 				</div>
 				<div class="relic-description">
-					When your deck is shuffled, each orb's Damage and Crit are randomly rolled between (Stat - 3) and (Stat + 3).
+					When your deck is shuffled, each orb's damage and crit are randomly rolled between (Stat - 3) and (Stat + 3).
 				</div>
 			</div>
 		</div>
@@ -1210,14 +1762,26 @@
 			</div>
 		</div>
 		<div class="tooltip">
-			<div class="relic-container reload_strength" style="background-image: url('img/bell.png');" >
+			<div class="relic-container refresh_x_pegs" style="background-image: url('img/leaf.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
-					Dumb Bell
+					Leaf The Rest For Later
 				</div>
 				<div class="relic-description">
-					Every reload grants +2 Muscircle.
+					The board will contain 10 additional Refresh Peg but each refresh only refreshes 8% of Peg (minimum of 5).
+				</div>
+			</div>
+		</div>
+		<div class="tooltip">
+			<div class="relic-container refreshed_pegs_get_upgraded" style="background-image: url('img/refresh_perspective.png');" >
+			</div>
+			<div class="tooltiptext">
+				<div class="relic-name">
+					Refresh Perspective
+				</div>
+				<div class="relic-description">
+					Whenever Peg are refreshed they are upgraded +1.
 				</div>
 			</div>
 		</div>
@@ -1229,7 +1793,19 @@
 					Shrewd Scales
 				</div>
 				<div class="relic-description">
-					Every reload grants +1 Ballance.
+					Every reload grants +2 Ballance.
+				</div>
+			</div>
+		</div>
+		<div class="tooltip">
+			<div class="relic-container reload_strength" style="background-image: url('img/bell.png');" >
+			</div>
+			<div class="tooltiptext">
+				<div class="relic-name">
+					Dumb Bell
+				</div>
+				<div class="relic-description">
+					Every reload grants +2 Muscircle.
 				</div>
 			</div>
 		</div>
@@ -1254,6 +1830,30 @@
 				</div>
 				<div class="relic-description">
 					Attacks apply 4 Blind to enemies.
+				</div>
+			</div>
+		</div>
+		<div class="tooltip">
+			<div class="relic-container self_damage_gain_ballwark" style="background-image: url('img/bastion_reaction.png');" >
+			</div>
+			<div class="tooltiptext">
+				<div class="relic-name">
+					Bastion Reaction
+				</div>
+				<div class="relic-description">
+					After losing health from self-damage, gain Ballwark equal to 2x health lost.
+				</div>
+			</div>
+		</div>
+		<div class="tooltip">
+			<div class="relic-container shield_pegs_add_damage" style="background-image: url('img/shield_basher.png');" >
+			</div>
+			<div class="tooltiptext">
+				<div class="relic-name">
+					Shield Basher
+				</div>
+				<div class="relic-description">
+					'Shield Peg can be Activated.'
 				</div>
 			</div>
 		</div>
@@ -1294,6 +1894,90 @@
 			</div>
 		</div>
 		<div class="tooltip">
+			<div class="relic-container spinesse_when_dodging" style="background-image: url('img/dodgy_dagger.png');" >
+			</div>
+			<div class="tooltiptext">
+				<div class="relic-name">
+					Dodgy Dagger
+				</div>
+				<div class="relic-description">
+					Whenever you evade an attack, gain 1 Spinesse.
+				</div>
+			</div>
+		</div>
+		<div class="tooltip">
+			<div class="relic-container splash_effect_on_targeted_attacks" style="background-image: url('img/aliensrock.png');" >
+			</div>
+			<div class="tooltiptext">
+				<div class="relic-name">
+					Alien's Rock
+				</div>
+				<div class="relic-description">
+					Targeted attacks also hit nearby enemies.
+				</div>
+			</div>
+		</div>
+		<div class="tooltip">
+			<div class="relic-container squirrel_ball" style="background-image: url('img/summoners_fate.png');" >
+			</div>
+			<div class="tooltiptext">
+				<div class="relic-name">
+					Spheridae's Fate
+				</div>
+				<div class="relic-description">
+					Summons a Round Squirrel onto the pegboard whenever 30 Peg are Hit but is destroyed after 100 uses.
+				</div>
+			</div>
+		</div>
+		<div class="tooltip">
+			<div class="relic-container start_with_ballwark" style="background-image: url('img/balladin_relic.png');" >
+			</div>
+			<div class="tooltiptext">
+				<div class="relic-name">
+					Balladroit
+				</div>
+				<div class="relic-description">
+					Start each battle with Ballwark 6.
+				</div>
+			</div>
+		</div>
+		<div class="tooltip">
+			<div class="relic-container start_with_ballwark_for_orb_levels" style="background-image: url('img/balladin_relic.png');" >
+			</div>
+			<div class="tooltiptext">
+				<div class="relic-name">
+					Balladroit
+				</div>
+				<div class="relic-description">
+					Start each battle with Ballwark equal to the number of orbs in your deck, or 2 x (your orb's largest base damage), whichever is higher.
+				</div>
+			</div>
+		</div>
+		<div class="tooltip">
+			<div class="relic-container strength_on_refresh" style="background-image: url('img/broccoli.png');" >
+			</div>
+			<div class="tooltiptext">
+				<div class="relic-name">
+					Brassicaceae Knuckles
+				</div>
+				<div class="relic-description">
+					Every 3 times the board is refreshed, gain 1 Muscircle.
+				</div>
+			</div>
+		</div>
+		<div class="tooltip">
+			<div class="relic-container strength_plus_one" style="background-image: url('img/dumbbell.png');" >
+			</div>
+			<div class="tooltiptext">
+				<div class="relic-name">
+					Training Weight
+				</div>
+				<div class="relic-description">
+					Whenever you gain Muscircle, gain 1 additional.
+				</div>
+			</div>
+		</div>
+		<div class="tooltip">
 			<div class="relic-container strength_start" style="background-image: url('img/spiral_slayer.png');" >
 			</div>
 			<div class="tooltiptext">
@@ -1330,14 +2014,14 @@
 			</div>
 		</div>
 		<div class="tooltip">
-			<div class="relic-container additional_crit1" style="background-image: url('img/special_button.png');" >
+			<div class="relic-container targeted_attacks_hit_all" style="background-image: url('img/aliensrock_secret.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
-					Special Button
+					Aliensrock
 				</div>
 				<div class="relic-description">
-					The board will contain 1 additional Critical Peg.
+					Targeted attacks hit all enemies
 				</div>
 			</div>
 		</div>
@@ -1350,18 +2034,6 @@
 				</div>
 				<div class="relic-description">
 					The board will contain 2 additional Critical Peg
-				</div>
-			</div>
-		</div>
-		<div class="tooltip">
-			<div class="relic-container additional_refresh1" style="background-image: url('img/fresh_bandana.png');" >
-			</div>
-			<div class="tooltiptext">
-				<div class="relic-name">
-					Fresh Bandana
-				</div>
-				<div class="relic-description">
-					The board will contain 1 additional Refresh Peg.
 				</div>
 			</div>
 		</div>
@@ -1390,6 +2062,18 @@
 			</div>
 		</div>
 		<div class="tooltip">
+			<div class="relic-container unique_orbs_buff" style="background-image: url('img/spinventoriginality.png');" >
+			</div>
+			<div class="tooltiptext">
+				<div class="relic-name">
+					Spinventoriginality
+				</div>
+				<div class="relic-description">
+					Unique orbs in your deck get +1/+2
+				</div>
+			</div>
+		</div>
+		<div class="tooltip">
 			<div class="relic-container unpoppable_pegs" style="background-image: url('img/gift_orange.png');" >
 			</div>
 			<div class="tooltiptext">
@@ -1414,462 +2098,6 @@
 			</div>
 		</div>
 		<div class="tooltip">
-			<div class="relic-container ballwark_counter" style="background-image: url('img/ripostal_service.png');" >
-			</div>
-			<div class="tooltiptext">
-				<div class="relic-name">
-					Ripostal Service
-				</div>
-				<div class="relic-description">
-					After you are attacked, the attacker receives damage equal to your remaining Ballwark.
-				</div>
-			</div>
-		</div>
-		<div class="tooltip">
-			<div class="relic-container armor_plus_one" style="background-image: url('img/essential_oil.png');" >
-			</div>
-			<div class="tooltiptext">
-				<div class="relic-name">
-					Essential Oil
-				</div>
-				<div class="relic-description">
-					Whenever Ballwark is gained, increase the amount gained by 2.
-				</div>
-			</div>
-		</div>
-		<div class="tooltip">
-			<div class="relic-container start_with_ballwark" style="background-image: url('img/balladin_relic.png');" >
-			</div>
-			<div class="tooltiptext">
-				<div class="relic-name">
-					Balladroit
-				</div>
-				<div class="relic-description">
-					Start each battle with Ballwark 6.
-				</div>
-			</div>
-		</div>
-		<div class="tooltip">
-			<div class="relic-container more_treasure_nodes" style="background-image: url('img/treasure_island.png');" >
-			</div>
-			<div class="tooltiptext">
-				<div class="relic-name">
-					Orbert's Story
-				</div>
-				<div class="relic-description">
-					'''?'' nodes have a +7% chance to be a treasure node and treasure has a +7% chance to be rare.'
-				</div>
-			</div>
-		</div>
-		<div class="tooltip">
-			<div class="relic-container heal_with_ballwark" style="background-image: url('img/knight_cap.png');" >
-			</div>
-			<div class="tooltiptext">
-				<div class="relic-name">
-					Knight Cap
-				</div>
-				<div class="relic-description">
-					If you have Ballwark remaining after battle, Heal 4.
-				</div>
-			</div>
-		</div>
-		<div class="tooltip">
-			<div class="relic-container ballpeen" style="background-image: url('img/ballpeenhammer.png');" >
-			</div>
-			<div class="tooltiptext">
-				<div class="relic-name">
-					Ballpeen Hammer
-				</div>
-				<div class="relic-description">
-					Whenever Shield Peg is created, gain 4 Ballwark.
-				</div>
-			</div>
-		</div>
-		<div class="tooltip">
-			<div class="relic-container fiery_furnace" style="background-image: url('img/meltingpot.png');" >
-			</div>
-			<div class="tooltiptext">
-				<div class="relic-name">
-					Fiery Furnace
-				</div>
-				<div class="relic-description">
-					Whenever Shield Peg is destroyed, gain 4 Ballwark.
-				</div>
-			</div>
-		</div>
-		<div class="tooltip">
-			<div class="relic-container strength_plus_one" style="background-image: url('img/dumbbell.png');" >
-			</div>
-			<div class="tooltiptext">
-				<div class="relic-name">
-					Training Weight
-				</div>
-				<div class="relic-description">
-					Whenever you gain Muscircle, gain 1 additional.
-				</div>
-			</div>
-		</div>
-		<div class="tooltip">
-			<div class="relic-container strength_on_refresh" style="background-image: url('img/broccoli.png');" >
-			</div>
-			<div class="tooltiptext">
-				<div class="relic-name">
-					Brassicaceae Knuckles
-				</div>
-				<div class="relic-description">
-					Every 3 times the board is refreshed, gain 1 Muscircle.
-				</div>
-			</div>
-		</div>
-		<div class="tooltip">
-			<div class="relic-container random_status_effect_on_hit" style="background-image: url('img/Roundreloquence.png');" >
-			</div>
-			<div class="tooltiptext">
-				<div class="relic-name">
-					Roundreloquence
-				</div>
-				<div class="relic-description">
-					Attacks apply a random debuff to the enemy
-				</div>
-			</div>
-		</div>
-		<div class="tooltip">
-			<div class="relic-container increase_neg_status" style="background-image: url('img/mask_of_sorrow.png');" >
-			</div>
-			<div class="tooltiptext">
-				<div class="relic-name">
-					Mask of Sorrow
-				</div>
-				<div class="relic-description">
-					When applying negative status effects to an enemy, increase the amount applied by 1.
-				</div>
-			</div>
-		</div>
-		<div class="tooltip">
-			<div class="relic-container increase_pos_status" style="background-image: url('img/mask_of_joy.png');" >
-			</div>
-			<div class="tooltiptext">
-				<div class="relic-name">
-					Mask of Joy
-				</div>
-				<div class="relic-description">
-					When applying positive status effects to yourself, increase the amount applied by 1.
-				</div>
-			</div>
-		</div>
-		<div class="tooltip">
-			<div class="relic-container attacks_apply_poison" style="background-image: url('img/grubby_hand.png');" >
-			</div>
-			<div class="tooltiptext">
-				<div class="relic-name">
-					Grubby Gloves
-				</div>
-				<div class="relic-description">
-					Attacks apply Spinfection 1 to enemies.
-				</div>
-			</div>
-		</div>
-		<div class="tooltip">
-			<div class="relic-container bombs_apply_poison" style="background-image: url('img/choke_mod.png');" >
-			</div>
-			<div class="tooltiptext">
-				<div class="relic-name">
-					Choke Mod
-				</div>
-				<div class="relic-description">
-					'Bombs apply Spinfection 1 when damaging enemies.'
-				</div>
-			</div>
-		</div>
-		<div class="tooltip">
-			<div class="relic-container crits_provide_pierce" style="background-image: url('img/au_auger.png');" >
-			</div>
-			<div class="tooltiptext">
-				<div class="relic-name">
-					Au Auger
-				</div>
-				<div class="relic-description">
-					Each crit triggered for projectile attacks cause them to pierce an additional enemy.
-				</div>
-			</div>
-		</div>
-		<div class="tooltip">
-			<div class="relic-container bag_of_orange_pegs" style="background-image: url('img/bag_of_orange_pegs.png');" >
-			</div>
-			<div class="tooltiptext">
-				<div class="relic-name">
-					Bag of Orange Pegs
-				</div>
-				<div class="relic-description">
-					Attacks get an increasing damage multiplier based on the number of Cleared Peg or removed Peg
-				</div>
-			</div>
-		</div>
-		<div class="tooltip">
-			<div class="relic-container coins_to_crits" style="background-image: url('img/lucky+cat.png');" >
-			</div>
-			<div class="tooltiptext">
-				<div class="relic-name">
-					Beckoning Crit
-				</div>
-				<div class="relic-description">
-					Every 11 Coins collected triggers a Crit.
-				</div>
-			</div>
-		</div>
-		<div class="tooltip">
-			<div class="relic-container a_good_slime" style="background-image: url('img/a_good_slime2.png');" >
-			</div>
-			<div class="tooltiptext">
-				<div class="relic-name">
-					A Good Slime
-				</div>
-				<div class="relic-description">
-					Whenever slime is applied to Peg it gets upgraded +5.
-				</div>
-			</div>
-		</div>
-		<div class="tooltip">
-			<div class="relic-container splash_effect_on_targeted_attacks" style="background-image: url('img/aliensrock.png');" >
-			</div>
-			<div class="tooltiptext">
-				<div class="relic-name">
-					Alien's Rock
-				</div>
-				<div class="relic-description">
-					Targeted attacks also hit nearby enemies.
-				</div>
-			</div>
-		</div>
-		<div class="tooltip">
-			<div class="relic-container unique_orbs_buff" style="background-image: url('img/spinventoriginality.png');" >
-			</div>
-			<div class="tooltiptext">
-				<div class="relic-name">
-					Spinventoriginality
-				</div>
-				<div class="relic-description">
-					Unique orbs in your deck get +1/+2
-				</div>
-			</div>
-		</div>
-		<div class="tooltip">
-			<div class="relic-container squirrel_ball" style="background-image: url('img/summoners_fate.png');" >
-			</div>
-			<div class="tooltiptext">
-				<div class="relic-name">
-					Spheridae's Fate
-				</div>
-				<div class="relic-description">
-					Summons a Round Squirrel onto the pegboard whenever 30 Peg are Hit but is destroyed after 100 uses.
-				</div>
-			</div>
-		</div>
-		<div class="tooltip">
-			<div class="relic-container prime_slime" style="background-image: url('img/prime_slime.png');" >
-			</div>
-			<div class="tooltiptext">
-				<div class="relic-name">
-					Prime Slime
-				</div>
-				<div class="relic-description">
-					Every 11 Peg Hit has a random positive slime applied.
-				</div>
-			</div>
-		</div>
-		<div class="tooltip">
-			<div class="relic-container refresh_x_pegs" style="background-image: url('img/leaf.png');" >
-			</div>
-			<div class="tooltiptext">
-				<div class="relic-name">
-					Leaf The Rest For Later
-				</div>
-				<div class="relic-description">
-					The board will contain 10 additional Refresh Peg but each refresh only refreshes 8% of Peg (minimum of 5).
-				</div>
-			</div>
-		</div>
-		<div class="tooltip">
-			<div class="relic-container buff_first_peg_hit" style="background-image: url('img/adventurine.png');" >
-			</div>
-			<div class="tooltiptext">
-				<div class="relic-name">
-					Adventurine
-				</div>
-				<div class="relic-description">
-					The first Peg Hit by each orb gets +10
-				</div>
-			</div>
-		</div>
-		<div class="tooltip">
-			<div class="relic-container bouncy_walls_and_bouncers" style="background-image: url('img/house_of_slime.png');" >
-			</div>
-			<div class="tooltiptext">
-				<div class="relic-name">
-					House of Slime
-				</div>
-				<div class="relic-description">
-					Walls and bottom bouncers are extra bouncy.
-				</div>
-			</div>
-		</div>
-		<div class="tooltip">
-			<div class="relic-container ballusion_on_crit" style="background-image: url('img/vitamin_c.png');" >
-			</div>
-			<div class="tooltiptext">
-				<div class="relic-name">
-					Vitamin C!
-				</div>
-				<div class="relic-description">
-					Whenever a crit is triggered, gain 10 Ballusion.
-				</div>
-			</div>
-		</div>
-		<div class="tooltip">
-			<div class="relic-container gamblin_iou" style="background-image: url('img/iou_note.png');" >
-			</div>
-			<div class="tooltiptext">
-				<div class="relic-name">
-					IOU
-				</div>
-				<div class="relic-description">
-					An extremely legitimate investment certificate (probably).
-				</div>
-			</div>
-		</div>
-		<div class="tooltip">
-			<div class="relic-container bombs_nav_gold" style="background-image: url('img/reduce_refuse_recycle.png');" >
-			</div>
-			<div class="tooltiptext">
-				<div class="relic-name">
-					Reduce, Re-Fuse, Recycle
-				</div>
-				<div class="relic-description">
-					'Bombs detonated while navigating provide 5 Gold.'
-				</div>
-			</div>
-		</div>
-		<div class="tooltip">
-			<div class="relic-container abacus" style="background-image: url('img/abacus.png');" >
-			</div>
-			<div class="tooltiptext">
-				<div class="relic-name">
-					Stacked Orbacus
-				</div>
-				<div class="relic-description">
-					Every enemy starts with 3 Exploitaball.
-				</div>
-			</div>
-		</div>
-		<div class="tooltip">
-			<div class="relic-container add_ballusion_with_spawns" style="background-image: url('img/fast_reakaton.png');" >
-			</div>
-			<div class="tooltiptext">
-				<div class="relic-name">
-					Fast Reakaton
-				</div>
-				<div class="relic-description">
-					Whenever any additional enemy spawns, gain 10 Ballusion.
-				</div>
-			</div>
-		</div>
-		<div class="tooltip">
-			<div class="relic-container lose_ballwark_gain_ballance" style="background-image: url('img/piece_of_mind.png');" >
-			</div>
-			<div class="tooltiptext">
-				<div class="relic-name">
-					Piece Of Mind
-				</div>
-				<div class="relic-description">
-					Whenever you lose your last Ballwark, gain 1 Ballance.
-				</div>
-			</div>
-		</div>
-		<div class="tooltip">
-			<div class="relic-container spinesse_when_dodging" style="background-image: url('img/dodgy_dagger.png');" >
-			</div>
-			<div class="tooltiptext">
-				<div class="relic-name">
-					Dodgy Dagger
-				</div>
-				<div class="relic-description">
-					Whenever you evade an attack using Ballusion, gain 1 Spinesse.
-				</div>
-			</div>
-		</div>
-		<div class="tooltip">
-			<div class="relic-container double_ballusion_cap" style="background-image: url('img/beleaguered_boots.png');" >
-			</div>
-			<div class="tooltiptext">
-				<div class="relic-name">
-					Beleaguered Boots
-				</div>
-				<div class="relic-description">
-					Your Ballusion cap is increased to 300.
-				</div>
-			</div>
-		</div>
-		<div class="tooltip">
-			<div class="relic-container gain_ballusion_from_enemy_dmg" style="background-image: url('img/distraction_reaction.png');" >
-			</div>
-			<div class="tooltiptext">
-				<div class="relic-name">
-					Distraction Reaction
-				</div>
-				<div class="relic-description">
-					Whenever you lose X health, you gain X Ballusion.
-				</div>
-			</div>
-		</div>
-		<div class="tooltip">
-			<div class="relic-container ballusion_dodge_grants_crit" style="background-image: url('img/redoublet.png');" >
-			</div>
-			<div class="tooltiptext">
-				<div class="relic-name">
-					Redoublet
-				</div>
-				<div class="relic-description">
-					Whenever you evade an attack using Ballusion, convert 2 Peg to Critical Peg.
-				</div>
-			</div>
-		</div>
-		<div class="tooltip">
-			<div class="relic-container all_orbs_debuff" style="background-image: url('img/downgrade_ring.png');" >
-			</div>
-			<div class="tooltiptext">
-				<div class="relic-name">
-					Endless DevouRing
-				</div>
-				<div class="relic-description">
-					Attacks deal 2x damage but every Peg Activated gets downgraded (-4 damage).
-				</div>
-			</div>
-		</div>
-		<div class="tooltip">
-			<div class="relic-container self_damage_gain_ballwark" style="background-image: url('img/bastion_reaction.png');" >
-			</div>
-			<div class="tooltiptext">
-				<div class="relic-name">
-					Bastion Reaction
-				</div>
-				<div class="relic-description">
-					After losing health from self-damage, gain Ballwark equal to 2x health lost.
-				</div>
-			</div>
-		</div>
-		<div class="tooltip">
-			<div class="relic-container on_discard_gain_crit_ballusion" style="background-image: url('img/is_dis_your_card.png');" >
-			</div>
-			<div class="tooltiptext">
-				<div class="relic-name">
-					Is Dis Your Card
-				</div>
-				<div class="relic-description">
-					On discard, gain Ballusion equal to 2x the discarded orb's crit damage.
-				</div>
-			</div>
-		</div>
-		<div class="tooltip">
 			<div class="relic-container upgrade_discarded_orbs" style="background-image: url('img/modest_mallet.png');" >
 			</div>
 			<div class="tooltiptext">
@@ -1877,199 +2105,31 @@
 					Modest Mallet
 				</div>
 				<div class="relic-description">
-					Whenever you discard an upgradeable orb, upgrade it until end of combat and take 1 damage.
+					Whenever you discard an upgradeable orb, upgrade it until end of combat.
 				</div>
 			</div>
 		</div>
 		<div class="tooltip">
-			<div class="relic-container crits_add_spinesse" style="background-image: url('img/mauliflower.png');" >
+			<div class="relic-container more_spinfection_damage_per_act" style="background-image: url('img/crystal_catalyst.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
-					Mauliflower
+					Crystal Catalyst
 				</div>
 				<div class="relic-description">
-					Every 3 times a crit is triggered, gain 1 Spinesse.
+					'Spinfection damage is increased by 5 per area, per stack.'
 				</div>
 			</div>
 		</div>
 		<div class="tooltip">
-			<div class="relic-container refreshed_pegs_get_upgraded" style="background-image: url('img/refresh_perspective.png');" >
+			<div class="relic-container gain_percentage_of_gold_each_node" style="background-image: url('img/sprouting_spinvestment.png');" >
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
-					Refresh Perspective
+					Sprouting Spinvestment
 				</div>
 				<div class="relic-description">
-					Whenever Peg are refreshed they are upgraded +1.
-				</div>
-			</div>
-		</div>
-		<div class="tooltip">
-			<div class="relic-container high_ballusion_guaranteed_crit" style="background-image: url('img/steady_scope.png');" >
-			</div>
-			<div class="tooltiptext">
-				<div class="relic-name">
-					Steady Scope
-				</div>
-				<div class="relic-description">
-					Every shot fired has a (2x Ballusion)% chance to trigger a crit.
-				</div>
-			</div>
-		</div>
-		<div class="tooltip">
-			<div class="relic-container coins_for_healing" style="background-image: url('img/haglins_hat.png');" >
-			</div>
-			<div class="tooltiptext">
-				<div class="relic-name">
-					Haglin's Hat
-				</div>
-				<div class="relic-description">
-					'Heal 10 for every 100 Coins collected.'
-				</div>
-			</div>
-		</div>
-		<div class="tooltip">
-			<div class="relic-container damage_creates_damage_reduction_slime" style="background-image: url('img/subtraction_reaction.png');" >
-			</div>
-			<div class="tooltiptext">
-				<div class="relic-name">
-					Subtraction Reaction
-				</div>
-				<div class="relic-description">
-					At the start of your turn apply damage reduction slime to X Peg where X is the number of times you lost health last turn.
-				</div>
-			</div>
-		</div>
-		<div class="tooltip">
-			<div class="relic-container attacks_apply_exploitaball" style="background-image: url('img/spiffy_crit.png');" >
-			</div>
-			<div class="tooltiptext">
-				<div class="relic-name">
-					Spiffy Crit
-				</div>
-				<div class="relic-description">
-					Attacks apply 1 Exploitaball to enemies, or 2 Exploitaball on crit.
-				</div>
-			</div>
-		</div>
-		<div class="tooltip">
-			<div class="relic-container attacks_apply_transpherency" style="background-image: url('img/clear_the_way.png');" >
-			</div>
-			<div class="tooltiptext">
-				<div class="relic-name">
-					Clear The Way!
-				</div>
-				<div class="relic-description">
-					Attacks apply 2 Transpherency to enemies.
-				</div>
-			</div>
-		</div>
-		<div class="tooltip">
-			<div class="relic-container coins_give_ballusion" style="background-image: url('img/flaunty_gauntlets.png');" >
-			</div>
-			<div class="tooltiptext">
-				<div class="relic-name">
-					Flaunty Gauntlets
-				</div>
-				<div class="relic-description">
-					Gain 1 Ballusion for every Coins collected.
-				</div>
-			</div>
-		</div>
-		<div class="tooltip">
-			<div class="relic-container targeted_attacks_hit_all" style="background-image: url('img/aliensrock_secret.png');" >
-			</div>
-			<div class="tooltiptext">
-				<div class="relic-name">
-					Aliensrock
-				</div>
-				<div class="relic-description">
-					Targeted attacks hit all enemies
-				</div>
-			</div>
-		</div>
-		<div class="tooltip">
-			<div class="relic-container start_with_ballwark_for_orb_levels" style="background-image: url('img/balladin_relic.png');" >
-			</div>
-			<div class="tooltiptext">
-				<div class="relic-name">
-					Balladroit
-				</div>
-				<div class="relic-description">
-					Start each battle with Ballwark equal to the number of orbs in your deck, or 2 x (your orb's largest base damage), whichever is higher.
-				</div>
-			</div>
-		</div>
-		<div class="tooltip">
-			<div class="relic-container gaining_ballwark_gives_muscircle" style="background-image: url('img/tabard.png');" >
-			</div>
-			<div class="tooltiptext">
-				<div class="relic-name">
-					Training Tabard
-				</div>
-				<div class="relic-description">
-					For every 10 Ballwark you gain, gain 1 Muscircle.
-				</div>
-			</div>
-		</div>
-		<div class="tooltip">
-			<div class="relic-container gaining_muscircle_gives_ballwark" style="background-image: url('img/addedAdvantarge.png');" >
-			</div>
-			<div class="tooltiptext">
-				<div class="relic-name">
-					Added Advantarge
-				</div>
-				<div class="relic-description">
-					Whenever an effect causes you to gain Muscircle, gain 2 Ballwark.
-				</div>
-			</div>
-		</div>
-		<div class="tooltip">
-			<div class="relic-container shield_pegs_add_damage" style="background-image: url('img/shield_basher.png');" >
-			</div>
-			<div class="tooltiptext">
-				<div class="relic-name">
-					Shield Basher
-				</div>
-				<div class="relic-description">
-					'Shield Peg can be Activated.'
-				</div>
-			</div>
-		</div>
-		<div class="tooltip">
-			<div class="relic-container only_minibosses" style="background-image: url('img/only_minibosses_relic_temp.png');" >
-			</div>
-			<div class="tooltiptext">
-				<div class="relic-name">
-					Miniboss Meetup
-				</div>
-				<div class="relic-description">
-					Every node is a miniboss.
-				</div>
-			</div>
-		</div>
-		<div class="tooltip">
-			<div class="relic-container poison_inc" style="background-image: url('img/spinsepsion.png');" >
-			</div>
-			<div class="tooltiptext">
-				<div class="relic-name">
-					Spinsepsion
-				</div>
-				<div class="relic-description">
-					Enemy Spinfection will increase each turn instead of decreasing.
-				</div>
-			</div>
-		</div>
-		<div class="tooltip">
-			<div class="relic-container debuff_dodge" style="background-image: url('img/debuff_distractor.png');" >
-			</div>
-			<div class="tooltiptext">
-				<div class="relic-name">
-					Debuff Distractor
-				</div>
-				<div class="relic-description">
-					Gain 1 Ballusion for every stack of negative status effect you apply to an enemy.
+					Increase your held Gold by 5% when entering a node.
 				</div>
 			</div>
 		</div>
