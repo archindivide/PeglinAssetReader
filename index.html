@@ -90,7 +90,7 @@
     </style>
   </head>
   <body>
-	<h1>Peglin Relics (v 1.0.1)</h1>
+	<h1>Peglin Relics (v 1.0.6)</h1>
 	<p>A simple viewer for relics in the Peglin video game. Hover over images to see relic names and descriptions.</p>
 	<div class="flex-container">
 		<div class="tooltip">
@@ -137,7 +137,7 @@
 					Perfected Reactant
 				</div>
 				<div class="relic-description">
-					'Bombs deal +15 damage.'
+					'Bombs deal +20 damage.'
 				</div>
 			</div>
 		</div>
@@ -197,7 +197,7 @@
 					Molten Gold
 				</div>
 				<div class="relic-description">
-					Battles start with 5 extra Coins.
+					Battles start with 10 extra Coins.
 				</div>
 			</div>
 		</div>
@@ -245,7 +245,7 @@
 					Hero's Backpack
 				</div>
 				<div class="relic-description">
-					Orbs receive +1/+2 for every following connected orb of the same type.
+					Non-Pebball orbs gain +1/+2 for every other orb of the same type owned.
 				</div>
 			</div>
 		</div>
@@ -257,7 +257,7 @@
 					Constricting Chains
 				</div>
 				<div class="relic-description">
-					Every orb will fire a copy of itself in the opposite of the aimed direction, but you can only aim in 4 directions.
+					Every orb will fire 2 additional copies onto the pegboard, but all orbs deal 0.5x damage (rounded down) and can only be aimed in 4 directions.
 				</div>
 			</div>
 		</div>
@@ -593,7 +593,7 @@
 					Recombombulator
 				</div>
 				<div class="relic-description">
-					Previously thrown Bombs can now be refreshed.
+					Previously thrown Bombs will now refresh as Bombs.
 				</div>
 			</div>
 		</div>
@@ -641,7 +641,7 @@
 					Branch of Ember
 				</div>
 				<div class="relic-description">
-					When applying Bramble to an enemy, apply Blind 2. When applying Blind to an un-Brambled enemy, apply Bramble 1.
+					When applying Bramble to an enemy, apply Blind 8. When applying Blind to an un-Brambled enemy, apply Bramble 1.
 				</div>
 			</div>
 		</div>
@@ -677,7 +677,7 @@
 					Haglin's Hat
 				</div>
 				<div class="relic-description">
-					'Heal 10 for every 100 Coins collected.'
+					'Heal 15% of your max health for every 100 Coins collected.'
 				</div>
 			</div>
 		</div>
@@ -878,7 +878,7 @@
 			</div>
 			<div class="tooltiptext">
 				<div class="relic-name">
-					Ring of Indignation
+					Ring of Pain
 				</div>
 				<div class="relic-description">
 					Whenever you lose health, deal 7x that amount to all enemies.
@@ -893,7 +893,7 @@
 					Weaponized Envy
 				</div>
 				<div class="relic-description">
-					Whenever you heal, deal 3x the recovered health as damage to the targeted enemy.
+					Whenever you heal, deal 3x the total heal as damage to the targeted enemy.
 				</div>
 			</div>
 		</div>
@@ -917,7 +917,7 @@
 					Beleaguered Boots
 				</div>
 				<div class="relic-description">
-					Your Ballusion cap is increased to 300.
+					Your Ballusion cap is increased to 999.
 				</div>
 			</div>
 		</div>
@@ -930,6 +930,18 @@
 				</div>
 				<div class="relic-description">
 					Pegboards start with 2x as many Bombs.
+				</div>
+			</div>
+		</div>
+		<div class="tooltip">
+			<div class="relic-container additional_battle_bombs" style="background-image: url('img/boomiverse.png');" >
+			</div>
+			<div class="tooltiptext">
+				<div class="relic-name">
+					Parallel Boomiverse
+				</div>
+				<div class="relic-description">
+					Whenever Bombs are created in battles, create an additional Bombs.
 				</div>
 			</div>
 		</div>
@@ -1265,7 +1277,7 @@
 					Power Glove
 				</div>
 				<div class="relic-description">
-					Attacks gain +1 /+1.
+					Attacks gain +1/+1.
 				</div>
 			</div>
 		</div>
@@ -1445,7 +1457,7 @@
 					Orbert's Story
 				</div>
 				<div class="relic-description">
-					'''?'' nodes have a +7% chance to be a treasure node and treasure has a +7% chance to be rare.'
+					Every 4 '?' nodes visited will guarantee a chest, and the chance for rare relics to appear in chests is increased by 50%.
 				</div>
 			</div>
 		</div>
@@ -1493,7 +1505,7 @@
 					Sealed Conviction
 				</div>
 				<div class="relic-description">
-					All attacks get +2/+2 but you have -1 orb discards.
+					All attacks get +3/+2 but you have -1 orb discards.
 				</div>
 			</div>
 		</div>
@@ -1649,7 +1661,7 @@
 					Haglin's Satchel
 				</div>
 				<div class="relic-description">
-					Randomly adds 2 rare orbs to your deck, then randomly upgrades orbs 5 times.
+					When taken, 2 rare orbs are added to your deck, orbs are randomly upgraded 3 times, and 50 Gold is acquired.
 				</div>
 			</div>
 		</div>
@@ -1793,7 +1805,7 @@
 					Shrewd Scales
 				</div>
 				<div class="relic-description">
-					Every reload grants +2 Ballance.
+					You gain 2 Ballance on every reload.
 				</div>
 			</div>
 		</div>
@@ -2093,7 +2105,7 @@
 					Perfect Forger
 				</div>
 				<div class="relic-description">
-					Whenever an upgradeable orb is added to your deck, upgrade it and take 4 damage.
+					Whenever an upgradeable orb is added to your deck, upgrade it and take 6 damage.
 				</div>
 			</div>
 		</div>
@@ -2129,7 +2141,43 @@
 					Sprouting Spinvestment
 				</div>
 				<div class="relic-description">
-					Increase your held Gold by 5% when entering a node.
+					Increase your held Gold by 20% when entering a '?' node.
+				</div>
+			</div>
+		</div>
+		<div class="tooltip">
+			<div class="relic-container apply_random_status_to_target_on_crit" style="background-image: url('img/effective_criticism_yellow.png');" >
+			</div>
+			<div class="tooltiptext">
+				<div class="relic-name">
+					Effective Criticism
+				</div>
+				<div class="relic-description">
+					Whenever a crit is triggered, apply a random debuff to the targeted enemy.
+				</div>
+			</div>
+		</div>
+		<div class="tooltip">
+			<div class="relic-container multihit_but_less_aim" style="background-image: url('img/heavy_hand.png');" >
+			</div>
+			<div class="tooltiptext">
+				<div class="relic-name">
+					Heavy Hand
+				</div>
+				<div class="relic-description">
+					All orbs Activate Peg an additional time, but your aimer is drastically reduced and all orbs become Dense.
+				</div>
+			</div>
+		</div>
+		<div class="tooltip">
+			<div class="relic-container more_pierce_less_bomb_damage" style="background-image: url('img/safety_pegulations.png');" >
+			</div>
+			<div class="tooltiptext">
+				<div class="relic-name">
+					Safety Pegulations
+				</div>
+				<div class="relic-description">
+					Projectile attacks pierce 2 additional enemies, but Bombs deal 75% less damage and self-damage.
 				</div>
 			</div>
 		</div>

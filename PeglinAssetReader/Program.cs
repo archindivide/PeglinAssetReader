@@ -16,7 +16,7 @@ var spriteImageFilePath = $"{assetPath}/Texture2D";
 var paramFile = $"{assetPath}/Scenes/Battle.unity";
 var outputPath = $"{Environment.CurrentDirectory}/output";
 var imageOutputPath = $"{outputPath}/img";
-var overwriteAssets = false;
+var overwriteAssets = true;
 
 var ignoreKeys = new List<string>() 
 {
