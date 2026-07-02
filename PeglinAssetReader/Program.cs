@@ -6,7 +6,7 @@ using System.Text.RegularExpressions;
 
 var peglinPath = ConfigurationManager.AppSettings["PeglinFolder"];
 var assetRipperPath = ConfigurationManager.AppSettings["AssetRipperApplication"];
-var assetRipperOutputPath = $"{Environment.CurrentDirectory}/asset-ripper-output";
+var assetRipperOutputPath = $"{Environment.CurrentDirectory}/manual-output";
 var assetPath = $"{assetRipperOutputPath}/ExportedProject/Assets";
 var languageFile = $"{assetRipperOutputPath}/ExportedProject/Assets/Resources/I2Languages.asset";
 var versionFile = $"{assetRipperOutputPath}/ExportedProject/ProjectSettings/ProjectSettings.asset";
@@ -16,7 +16,7 @@ var spriteImageFilePath = $"{assetPath}/Texture2D";
 var paramFile = $"{assetPath}/Scenes/Battle.unity";
 var outputPath = $"{Environment.CurrentDirectory}/output";
 var imageOutputPath = $"{outputPath}/img";
-var overwriteAssets = true;
+//var overwriteAssets = true;
 
 var ignoreKeys = new List<string>() 
 {
@@ -26,21 +26,22 @@ var ignoreKeys = new List<string>()
     //"heal_on_reload_peg_num"
 };
 
-//Run AssetRipper to extract Peglin files from compiled code
-if (Directory.Exists(assetRipperOutputPath) && Directory.GetFileSystemEntries(assetRipperOutputPath).Length > 0 && !overwriteAssets)
-{
-    Console.WriteLine("Skipping AssetRipper step because there are already files in the output path.");
-}
-else
-{
-    var proc = new Process();
-    proc.StartInfo.FileName = assetRipperPath;
-    proc.StartInfo.Arguments = $"\"{peglinPath}\" -o \"{assetRipperOutputPath}\" -q";
-    proc.Start();
-    proc.WaitForExit();
-    var exitCode = proc.ExitCode;
-    proc.Close();
-}
+//Run AssetRipper to extract Peglin files from compiled code, deprecated feature no longer works, must now be manual process
+//will figure out how to implement C# libraries from AssetRipper in the future maybe
+//if (Directory.Exists(assetRipperOutputPath) && Directory.GetFileSystemEntries(assetRipperOutputPath).Length > 0 && !overwriteAssets)
+//{
+//    Console.WriteLine("Skipping AssetRipper step because there are already files in the output path.");
+//}
+//else
+//{
+//    var proc = new Process();
+//    proc.StartInfo.FileName = assetRipperPath;
+//    proc.StartInfo.Arguments = $"\"{peglinPath}\" -o \"{assetRipperOutputPath}\" -q";
+//    proc.Start();
+//    proc.WaitForExit();
+//    var exitCode = proc.ExitCode;
+//    proc.Close();
+//}
 
 //Parse params (for constants used in descriptions)
 var paramText = File.ReadAllText(paramFile);
