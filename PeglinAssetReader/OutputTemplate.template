@@ -4,116 +4,133 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Peglin Relics</title>
-	<link rel="icon" type="image/x-icon" href="img/peglin-icon.ico">
-	<meta name="description" content="This page, titled Peglin Relics, is a simple viewer for relics in the Peglin video game. Hover over images to see relic names and descriptions.">
-	<meta name="keywords" content="peglin, relic, relics, viewer"> 
+    <link rel="icon" type="image/x-icon" href="img/peglin-icon.ico">
+    <meta name="description" content="This page, titled Peglin Relics, is a simple viewer for relics in the Peglin video game. Hover over images to see relic names and descriptions.">
+    <meta name="keywords" content="peglin, relic, relics, viewer"> 
     <style>
-		body {
-			font-family: Arial, sans-serif;
-			max-width: calc(100% - 150px);
-		}
+        body {
+            font-family: Arial, sans-serif;
+            max-width: calc(100% - 150px);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Takes full window height */
+        }
 
-		.flex-container {
-			display: flex;
-			flex-direction: row;
-			flex-wrap: wrap;
-		}
-		
+        .main-content {
+            flex: 1;
+        }
+
+        footer {
+            margin-top: 100px;
+        }
+
+        footer p {
+            font-size: 14px;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        
         .relic-container {
-			border: 2px solid #000000;
-			border-radius: 5px;
-			height: 50px;
-			width: 50px;
-			margin-bottom: 5px;
-			margin-right: 5px;
-			padding: 5px;
-			background-repeat: no-repeat;
-			background-position: 5px;
-			image-rendering: pixelated;
-			background-size: 50px;
-		}
-		
-		.tooltip {
-			position: relative;
-			display: inline-block;
-		}
+            border: 2px solid #000000;
+            border-radius: 5px;
+            height: 50px;
+            width: 50px;
+            margin-bottom: 5px;
+            margin-right: 5px;
+            padding: 5px;
+            background-repeat: no-repeat;
+            background-position: 5px;
+            image-rendering: pixelated;
+            background-size: 50px;
+        }
+        
+        .tooltip {
+            position: relative;
+            display: inline-block;
+        }
 
-		.tooltip .tooltiptext {
-			visibility: hidden;
-			width: 200px;
-			background-color: black;
-			color: #fff;
-			text-align: center;
-			border-radius: 6px;
-			padding: 5px;
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 200px;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
 
-			/* Position the tooltip */
-			position: absolute;
-			z-index: 1;
-		}
+            /* Position the tooltip */
+            position: absolute;
+            z-index: 1;
+        }
 
-		.tooltip:hover .tooltiptext {
-			visibility: visible;
-		}
-		
-		.relic-name {
-			font-size: 18px;
-			font-weight: bold;
-		}
-		
-		.relic-description {
-			font-size: 14px;
-		}
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+        }
+        
+        .relic-name {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        .relic-description {
+            font-size: 14px;
+        }
 
-		/* customizations for individual resources to fix some images */
-		.bramble_blind_combo {
+        /* customizations for individual resources to fix some images */
+        .bramble_blind_combo {
             background-size: 150px;
             background-clip: content-box;
             background-position: 5px 5px;
         }
 
-		.inflight_damage {
-			background-position: 2px;
-			background-size: 300px;
-		}
+        .inflight_damage {
+            background-position: 2px;
+            background-size: 300px;
+        }
 
-		.attacks_apply_poison {
-			background-position: top;
-			background-size: 160px;
-		}
+        .attacks_apply_poison {
+            background-position: top;
+            background-size: 160px;
+        }
 
-		.crits_provide_pierce {
-			background-size: 135px;
-			background-clip: content-box;
-			background-position: 10px 5px;
-		}
+        .crits_provide_pierce {
+            background-size: 135px;
+            background-clip: content-box;
+            background-position: 10px 5px;
+        }
     </style>
   </head>
   <body>
-	<h1>Peglin Relics (v{{version}})</h1>
-	<p>A simple viewer for relics in the Peglin video game. Hover over images to see relic names and descriptions.</p>
-	<div class="flex-container">
-		{{#each relics}}
-		<div class="tooltip">
-			<div class="relic-container {{this.LocKey}}" style="background-image: url('img/{{this.ImageFileName}}');" >
-			</div>
-			<div class="tooltiptext">
-				<div class="relic-name">
-					{{this.Name}}
-				</div>
-				<div class="relic-description">
-					{{this.DescCombined}}
-				</div>
-			</div>
-		</div>
-		{{/each}}
-	</div>
+    <div class="main-content">
+        <h1>Peglin Relics (v{{version}})</h1>
+        <p>A simple viewer for relics in the Peglin video game. Hover over images to see relic names and descriptions.</p>
+        <div class="flex-container">
+            {{#each relics}}
+            <div class="tooltip">
+                <div class="relic-container {{this.LocKey}}" style="background-image: url('img/{{this.ImageFileName}}');" >
+                </div>
+                <div class="tooltiptext">
+                    <div class="relic-name">
+                        {{this.Name}}
+                    </div>
+                    <div class="relic-description">
+                        {{this.DescCombined}}
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+    <footer>
+        <p>
+            <b>Donations support future projects</b>
+            <br><a href="https://bitcoin.org" target="_NEW">BTC</a>: <b><a href="bitcoin:bc1qc3rycyggl75mjeh4k6aka7r3a5gfs2vcu3555m">bc1qc3rycyggl75mjeh4k6aka7r3a5gfs2vcu3555m</a></b>
+            <br><a href="https://ethereum.org" target="_NEW">ETH</a>/<a href="https://binance.com/" target="_NEW">BNB</a>: <b><a href="ethereum:0x2381b5e3007fAf89b78C017F49Ef7BC7099cC4E4">0x2381b5e3007fAf89b78C017F49Ef7BC7099cC4E4</a></b>
+        </p>
+    </footer>
   </body>
-  <footer>
-	<p style="overflow-wrap: break-word;">
-        <a href="https://bitcoin.org" target="_NEW">BTC</a>: <b><a href="bitcoin:bc1qc3rycyggl75mjeh4k6aka7r3a5gfs2vcu3555m">bc1qc3rycyggl75mjeh4k6aka7r3a5gfs2vcu3555m</a></b>
-        <br><a href="https://ethereum.org" target="_NEW">ETH</a>: <b><a href="ethereum:0x2381b5e3007fAf89b78C017F49Ef7BC7099cC4E4">0x2381b5e3007fAf89b78C017F49Ef7BC7099cC4E4</a></b>
-        <br><a href="https://binance.com/" target="_NEW">BNB</a>: <b>0x2381b5e3007fAf89b78C017F49Ef7BC7099cC4E4</b>
-    </p>
-  </footer>
 </html>

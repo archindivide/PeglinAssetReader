@@ -4,9 +4,9 @@ using System.Configuration;
 using System.Diagnostics;
 using System.Text.RegularExpressions;
 
-var peglinPath = ConfigurationManager.AppSettings["PeglinFolder"];
-var assetRipperPath = ConfigurationManager.AppSettings["AssetRipperApplication"];
-var assetRipperOutputPath = $"{Environment.CurrentDirectory}/manual-output";
+//var peglinPath = ConfigurationManager.AppSettings["PeglinFolder"];
+//var assetRipperPath = ConfigurationManager.AppSettings["AssetRipperApplication"];
+var assetRipperOutputPath = ConfigurationManager.AppSettings["ManualOutputLocation"];
 var assetPath = $"{assetRipperOutputPath}/ExportedProject/Assets";
 var languageFile = $"{assetRipperOutputPath}/ExportedProject/Assets/Resources/I2Languages.asset";
 var versionFile = $"{assetRipperOutputPath}/ExportedProject/ProjectSettings/ProjectSettings.asset";
